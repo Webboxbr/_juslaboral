@@ -144,6 +144,7 @@ h3 {
 
 /*alinhamentos*/
 .centraliza {text-align: center;}
+.pos-rel {position: relative;}
 
 
 
@@ -203,6 +204,9 @@ h3 {
 
 
 
+
+
+
 @media (min-width: 299px) {
 
 	h1 {text-align: center; width: 100%}	
@@ -227,9 +231,18 @@ h3 {
 	.fb-like-box {display: none!important;}
 	.fb-like {display: block!important;}
 
+	.navbar-default ul li a {
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 300;
+		text-transform: uppercase;
+		color: #333;
+	}
+
 }
 
 @media (min-width: 768px) {
+
+	.navbar-default {padding-bottom:0!important;margin-bottom:0!important;}
 
 	/*Menu header*/
 	.navbar-default {
@@ -277,7 +290,12 @@ h3 {
 
 @media (min-width: 992px) {
 
-	h1 {width: 404px;}
+	.pos-rel h1 {
+		width: 404px; 
+		position: absolute!important;
+		top:0;
+		left:10px;
+	}
 
 	#header {
 		height: 123px;
