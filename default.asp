@@ -40,71 +40,21 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
- 	<header id="header">
- 		<div class="container">
- 			<div class="row">
- 				<div class="col-xs-12 col-sm-12 col-md-5 pos-rel"><h1><a href="default.asp"><img src="images/logo.png" alt="Juslaboral"></a></h1></div>
- 				<div class="col-xs-12 col-sm-12 col-md-7">
-
-					<nav class="navbar navbar-default" role="navigation">
-					  <div class="container-fluid">
-					    <!-- Brand and toggle get grouped for better mobile display -->
-					    <div class="navbar-header">
-					      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					        <span class="sr-only">Toggle navigation</span>
-					        <span class="icon-bar"></span>
-					        <span class="icon-bar"></span>
-					        <span class="icon-bar"></span>
-					      </button>      
-					    </div>
-					    <!-- Collect the nav links, forms, and other content for toggling -->
-					    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					      <ul class="nav navbar-nav">
-					        <li class="dropdown">
-					          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="ico1"></span>Quem somos<span class="caret"></span></a>
-					          <ul class="dropdown-menu" role="menu">
-					            <li><a href="#">Juslaboral</a></li>
-					            <li><a href="#">Professores</a></li>
-					          </ul>
-					        </li>
-					        <li class="dropdown">
-					          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="ico2"></span>Cursos<span class="caret"></span></a>
-					          <ul class="dropdown-menu" role="menu">
-					            <li><a href="#">Discursiva</a></li>
-					            <li><a href="#">Sentença</a></li>
-					            <li><a href="#">Preparatório oral</a></li>
-					            <li><a href="#">Acompanhamento 24h</a></li>
-					          </ul>
-					        </li>
-					        <li><a href="#"><span id="ico3"></span>Provas</a></li>
-					        <li><a href="#"><span id="ico4"></span>Galeria</a></li>
-					        <li><a href="#"><span id="ico5"></span>Depoimentos</a></li>
-					        <li><a href="#"><span id="ico6"></span>Contato</a></li>
-					      </ul>
-					    </div><!-- /.navbar-collapse -->
-					  </div><!-- /.container-fluid -->
-					</nav>
- 					
- 				</div>
- 			</div>
- 		</div>
- 	</header> <!-- header /-->
-
-
-
-
-
-
+ 	<!--#include file="_includes/_header.asp" -->
 
  	<section id="banner">
  		<div class="container-fluid">
- 			<ul class="bxslider">
-			  <li><img src="images/banner/banner.jpg" alt=""></li>
-			  <li><img src="images/banner/banner.jpg" alt=""></li>
-			</ul>
+ 			<div class="row">
+ 				<div class="col-xs-12">
+		 			<ul class="bxslider">
+					  <li><img src="images/banner/banner.jpg" alt=""></li>
+					  <li><img src="images/banner/banner.jpg" alt=""></li>
+					</ul>
+				</div>
+			</div>
  		</div>
  	</section> <!-- banner /-->
- 	<section id="conteudo" class="bg-cont-home">
+ 	<section id="conteudo-home" class="bg-cont-home">
  		<div class="container">
  			<div class="row">
  				<div class="col-xs-12 col-sm-12 col-md-4">
@@ -159,17 +109,26 @@
  			</div>
  			<div class="row" style="margin-top:20px;">
  				<div class="col-xs-12 col-sm-12 col-md-4 it centraliza botao" data-toggle="modal" data-target="#myModal">
- 					<img src="images/foto_dep_1.png" alt="">
+ 					<div class="cap-foto">
+ 						<img class="mask" src="images/mask_exagono.png" alt="">
+ 						<img class="foto" src="images/foto_dep_1.png" alt="">
+ 					</div> 					
  					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
  					<p><b>Aline Mello- DF</b></p>
  				</div>
  				<div class="col-xs-12 col-sm-12 col-md-4 it centraliza botao" data-toggle="modal" data-target="#myModal">
- 					<img src="images/foto_dep_2.png" alt="">
+ 					<div class="cap-foto">
+ 						<img class="mask" src="images/mask_exagono.png" alt="">
+ 						<img class="foto" src="images/foto_dep_2.png" alt="">
+ 					</div> 					
  					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
  					<p><b>Victor Gonçalves Guimerães - PR</b></p>
  				</div>
  				<div class="col-xs-12 col-sm-12 col-md-4 it centraliza botao" data-toggle="modal" data-target="#myModal">
- 					<img src="images/foto_dep_3.png" alt="">
+ 					<div class="cap-foto">
+ 						<img class="mask" src="images/mask_exagono.png" alt="">
+ 						<img class="foto" src="images/foto_dep_3.png" alt="">
+ 					</div> 
  					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
  					<p><b>Jorge Silva - SP</b></p>
  				</div>
@@ -180,54 +139,7 @@
  		</div>
  	</section> <!-- depoimentos /-->
  	
- 	<section id="rodape">
- 		<div class="container">
- 			<div class="row">
- 				<div class="col-xs-12 col-sm-12 col-md-3">
- 					<h4><span id="ico11"></span>Menu</h4>
- 					<ul>
- 						<li><a href="">Juslaboral</a></li>
- 						<li><a href="">Professores</a></li>
- 						<li><a href="">Cursos</a></li>
- 						<li><a href="">Provas</a></li>
- 						<li><a href="">Galerias</a></li>
- 						<li><a href="">Depoimentos</a></li>
- 						<li><a href="">Contato</a></li>
- 					</ul>
- 				</div>
- 				<div class="col-xs-12 col-sm-12 col-md-3">
- 					<h4><span id="ico12"></span>Cursos</h4>
- 					<ul>
- 						<li><a href="">Discursivo</a></li>
- 						<li><a href="">Sentença</a></li>
- 						<li><a href="">Preparatório oral</a></li>
- 						<li><a href="">Acompanhamento 24h</a></li>
- 					</ul>
- 				</div>
- 				<div class="col-xs-12 col-sm-12 col-md-6">
- 					<h4><span id="ico13"></span></h4>
- 					<div class="centraliza">
- 						<div class="fb-like-box" data-href="https://www.facebook.com/cursojuslaboral" data-colorscheme="light" data-show-faces="false" data-header="true" data-stream="true" data-show-border="true" data-height="382" data-width="400"></div>
-
- 						<div class="fb-like" data-href="https://www.facebook.com/cursojuslaboral" data-layout="box_count" data-action="like" data-show-faces="true" data-share="false"></div>
- 					</div>
- 				</div>
- 			</div>
- 		</div>
- 	</section>
- 	<footer id="footer">
- 		<div class="container">		
- 			<div class="row">
- 				<div class="col-xs-12">
- 					<p><b>Curso Juslaboral</b> - Copyght © 2014 - Todos os direitos reservados a Curso Juslaboral Ltda.<br>
- 					contato@cursojuslaboral.com.br</p>
- 					<a href="http://www.webbox.com.br" target="_blank"><img src="images/logo_webbox.gif" alt="Webbox"></a>
- 				</div>
- 			</div>
- 		</div>
- 	</footer> <!-- footer /-->
-
- 
+ 	<!--#include file="_includes/_rodape.asp" --> 
 
 
 <!-- Modal /-->
