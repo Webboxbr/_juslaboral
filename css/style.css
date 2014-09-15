@@ -3,6 +3,7 @@ body {
 	position: relative;
 	z-index: 1;
 }
+label {display: none;}
 #header {
 	position: relative;
 	z-index:10;
@@ -85,6 +86,9 @@ h2 {
 	font-size: 1.875em;
 	text-align:center;
 }
+.t15 {
+	font-size: 0.938em!important;
+}
 
 
 
@@ -153,8 +157,15 @@ h3 {
 	font-weight: bold;
 }
 .dep-texto {
-	font-family: 'Nothing You Could Do', cursive;
+	font-family: 'Nothing You Could Do', cursive!important;
 	font-size: 1.250em;
+	color: #001F26;
+	text-shadow: 3px 3px 3px #aaa;
+	text-align: center;
+}
+.dep-texto-maior {
+	font-family: 'Nothing You Could Do', cursive;
+	font-size: 1.875em;
 	color: #001F26;
 	text-shadow: 3px 3px 3px #aaa;
 	text-align: center;
@@ -211,14 +222,32 @@ h3 {
 		background-repeat: no-repeat;
 	}
 
-#ico14, #ico15, #ico16, #ico17, #ico18, #ico19, #ico20 {
+#ico14, #ico15, #ico16, #ico17, #ico18, #ico19, #ico20, #ico22, #ico23, #ico25 {
 	height: 67px;
 	width: 70px;
 	display: inline-block;
 	background-position: center;
 	background-repeat: no-repeat;
 	margin-right: 5px;
-}	
+}
+#ico26 {
+	height: 44px;
+	width: 49px;
+	display: inline-block;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-right: 5px;
+}
+
+#ico24 {
+	width: 35px!important;
+	height: 32px!important;
+	display: block;
+	background-position: center;
+	background-repeat: no-repeat;
+	float: left;
+	margin-right: 5px;
+}
 
 #ico7 {background-image: url(../images/ico/ico7.png);}
 #ico8 {background-image: url(../images/ico/ico8.png);}
@@ -234,7 +263,11 @@ h3 {
 #ico18 {background-image: url(../images/ico/ico18.jpg);}
 #ico19 {background-image: url(../images/ico/ico19.jpg);}
 #ico20 {background-image: url(../images/ico/ico20.jpg);}
-
+#ico22 {background-image: url(../images/ico/ico22.jpg);}
+#ico23 {background-image: url(../images/ico/ico23.jpg);}
+#ico24 {background-image: url(../images/ico/ico24.jpg);}
+#ico25 {background-image: url(../images/ico/ico25.jpg);}
+#ico26 {background-image: url(../images/ico/ico26.jpg);}
 
 /*alinhamentos*/
 .centraliza {text-align: center;}
@@ -365,6 +398,8 @@ h3 {
 	background-position: center;
 	background-repeat: no-repeat;
 }
+
+
 
 
 
