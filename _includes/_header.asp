@@ -18,7 +18,8 @@
 					    <!-- Collect the nav links, forms, and other content for toggling -->
 					    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					      <ul class="nav navbar-nav">
-					        <li class="dropdown">
+					      <li><a href="inscricoes.asp"><span id="ico2"></span>Inscrição</a></li>
+					        <!--<li class="dropdown">
 					          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="ico1"></span>Quem somos<span class="caret"></span></a>
 					          <ul class="dropdown-menu" role="menu">
 					            <li><a href="quem_somos.asp">Juslaboral</a></li>
@@ -38,7 +39,7 @@
 					        <li><a href="provas.asp"><span id="ico3"></span>Provas</a></li>
 					        <li><a href="galeria.asp"><span id="ico4"></span>Galeria</a></li>
 					        <li><a href="depoimentos.asp"><span id="ico5"></span>Depoimentos</a></li>
-					        <li><a href="contato.asp"><span id="ico6"></span>Contato</a></li>
+					        <li><a href="contato.asp"><span id="ico6"></span>Contato</a></li>-->
 					      </ul>
 					    </div><!-- /.navbar-collapse -->
 					  </div><!-- /.container-fluid -->

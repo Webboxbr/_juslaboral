@@ -2,6 +2,7 @@
  		<div class="container">
  			<div class="row">
  				<div class="col-xs-12 col-sm-12 col-md-3">
+ 					<!--
  					<h4><span id="ico11"></span>Menu</h4>
  					<ul>
  						<li><a href="">Juslaboral</a></li>
@@ -12,8 +13,10 @@
  						<li><a href="">Depoimentos</a></li>
  						<li><a href="">Contato</a></li>
  					</ul>
+ 					/-->
  				</div>
  				<div class="col-xs-12 col-sm-12 col-md-3">
+ 					<!--
  					<h4><span id="ico12"></span>Cursos</h4>
  					<ul>
  						<li><a href="">Discursivo</a></li>
@@ -21,6 +24,7 @@
  						<li><a href="">Preparatório oral</a></li>
  						<li><a href="">Acompanhamento 24h</a></li>
  					</ul>
+ 					/-->
  				</div>
  				<div class="col-xs-12 col-sm-12 col-md-6">
  					<h4><span id="ico13"></span></h4>

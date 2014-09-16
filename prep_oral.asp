@@ -51,7 +51,7 @@
  					<p>UT ENIM AD MINIM VENIAM, ULLAMCO LABORIS  EX EA COMMODO CONSEQUAT.</p>
  					<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
  					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <button type="button" class="btn btn-vermelho" style="margin-bottom:20px">inscreva-se</button>
+          <button type="button" class="btn btn-vermelho" style="margin-bottom:20px" onclick="location.href='inscricoes.asp'">inscreva-se</button>
  				</div>        
  			</div>
 

@@ -4,6 +4,7 @@ body {
 	z-index: 1;
 }
 label {display: none;}
+.alinha-esq {text-align: left!important;}
 #header {
 	position: relative;
 	z-index:10;
@@ -222,7 +223,7 @@ h3 {
 		background-repeat: no-repeat;
 	}
 
-#ico14, #ico15, #ico16, #ico17, #ico18, #ico19, #ico20, #ico22, #ico23, #ico25 {
+#ico14, #ico15, #ico16, #ico17, #ico18, #ico19, #ico20, #ico22, #ico23, #ico25, #ico27 {
 	height: 67px;
 	width: 70px;
 	display: inline-block;
@@ -268,6 +269,7 @@ h3 {
 #ico24 {background-image: url(../images/ico/ico24.jpg);}
 #ico25 {background-image: url(../images/ico/ico25.jpg);}
 #ico26 {background-image: url(../images/ico/ico26.jpg);}
+#ico27 {background-image: url(../images/ico/ico27.jpg);}
 
 /*alinhamentos*/
 .centraliza {text-align: center;}
@@ -292,6 +294,26 @@ h3 {
   background-color: #002533;
   border-color: #002533;
 }
+
+
+.btn-cinza-escuro {
+  color: #fff;
+  background-color: #333333;
+  border-color: #333333;
+  font-size: 0.938em;
+  text-transform: uppercase;
+}
+.btn-cinza-escuro:hover,
+.btn-cinza-escuro:focus,
+.btn-cinza-escuro:active,
+.btn-cinza-escuro.active,
+.open > .dropdown-toggle.btn-cinza-escuro {
+  color: #fff;
+  background-color: #333333;
+  border-color: #333333;
+}
+
+
 .btn-azul {
   color: #fff;
   background-color: #004C97;

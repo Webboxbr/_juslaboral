@@ -75,8 +75,7 @@
             </div>
             <small>* Preenchimento obrigatório</small><br>
 
-            <button type="submit" class="btn btn-vermelho">Enviar</button>
-            
+            <button type="submit" class="btn btn-vermelho">Enviar</button>        
             
           </form>
         </div>
