@@ -3,6 +3,7 @@ $ cat .gitignore
 # Ignorar arquivos específicos
 enviamail_inscricao.asp
 global.asp
+juslaboral.sql
 
 # Use curingas como
 # *~
