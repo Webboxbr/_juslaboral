@@ -64,14 +64,14 @@
  		<div class="container">
  			<div class="row">
  				<div class="col-xs-12 col-sm-12 col-md-4">
- 					<!--
+ 					
           <h2 class="azul-escuro"><span id="ico7"></span>Quem Somos</h2>
  					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
  					<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi.</p>
  					<div class="centraliza v-menor">
  						<button type="button" class="btn btn-azul-escuro">Veja mais</button>
  					</div>
-          /-->
+          
  				</div>
  				<div class="col-xs-12 col-sm-12 col-md-4">
  					<h2 class="vermelho"><span id="ico8"></span>Cursos</h2>
@@ -79,12 +79,12 @@
  					<div class="centraliza">
  						<img src="images/cursos.png" alt="Cursos" class="img-cursos">
  					</div>
- 					<!--<div class="centraliza v-menor" style="margin-top:10px;">
+ 					<div class="centraliza v-menor" style="margin-top:10px;">
  						<button type="button" class="btn btn-vermelho">Veja mais</button>
- 					</div>/-->
+ 					</div>
  				</div>
  				<div class="col-xs-12 col-sm-12 col-md-4">
-          <!--
+          
  					<h2 class="laranja"><span id="ico9"></span>Notícias</h2>
 					<p><span class="tit-not">Lorem incidunt ut labore - 10/10/2014</span><br>
 					Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
@@ -94,10 +94,10 @@
 
 					<p><span class="tit-not">Modi tempora incidunt ut labore - 10/10/2014</span><br>
 					Neque porro quisquam est, qui dolorem ipsum quia sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat</p>
-          /-->
+          
  				</div>
  			</div>
- 			<!--<div class="row v-maior" style="margin-top:10px;">
+ 			<div class="row v-maior" style="margin-top:10px;">
  				<div class="col-xs-12 col-sm-12 col-md-4 centraliza">
  					<button type="button" class="btn btn-azul-escuro">Veja mais</button>
  				</div>
@@ -105,12 +105,12 @@
  					<button type="button" class="btn btn-vermelho">Veja mais</button>
  				</div>
  				<div class="col-xs-12 col-sm-12 col-md-4 centraliza"></div>
- 			</div>/-->
+ 			</div>
  		</div>
  	</section> <!-- conteudo /-->
 
 
-  <!--
+ 
  	<section id="depoimentos">
  		<div class="container">
  			<div class="row">
@@ -150,7 +150,7 @@
  				<button type="button" class="btn btn-amarelo">Veja mais</button>
  			</div>
  		</div>
- 	</section> /--> <!-- depoimentos /-->
+ 	</section> <!-- depoimentos /-->
 
 
 

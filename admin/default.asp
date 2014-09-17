@@ -44,7 +44,7 @@ erro	=	request("err")
 <div id="geral">
 
 	<div class="logo"></div>
-	<p class="t30 azul-2 aling-centro">Bem vindo a ferramenta de administração do<br><span class="t50 negrito">Dr. Gustavo Abreu.</span></p>
+	<p class="t30 azul-2 aling-centro">Bem vindo a ferramenta de administração do<br><span class="t50 negrito">Curso Juslaboral</span></p>
 
 </div>
 
