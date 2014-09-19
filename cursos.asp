@@ -1,3 +1,4 @@
+<!--#include file="admin/conexao.asp" -->
 <!DOCTYPE HTML>
 <html lang="pt-br">
 <head>
@@ -52,36 +53,37 @@
       </div>
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-8">
- 					<p>UT ENIM AD MINIM VENIAM, ULLAMCO LABORIS  EX EA COMMODO CONSEQUAT.</p>
- 					<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
- 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+ 					<p>Combinando expertises em busca da realização integral</p>
+ 					<p>Conteúdos práticos e esclarecedores, que integram-se entre si para oferecer uma assimilação completa do conhecimento e favorecer a aprovação.</p> 					
  				</div>
         <div class="col-xs-12 col-sm-12 col-md-4 centraliza">
           <img src="images/cursos.png" alt="">
         </div>
  			</div>
+
+
+      <%
+      Set rsCursos = Server.CreateObject("ADODB.Recordset")
+      rsCursos.Open "select * from "&prefixoTabela&"cursos where ativo='s' order by id desc", Conexao
+      while not rsCursos.eof
+      %>
+      <hr>
       <div class="row font-maior" style="margin-top:30px">
-        <div class="col-xs-12 col-sm-12 col-md-3 centraliza">
-          <img src="images/discursiva.png" alt="Discursiva" style="margin-bottom:20px">          
-          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <button type="button" class="btn btn-vermelho" style="margin-bottom:20px" onclick="location.href='discursiva.asp'">Veja mais</button>
+        <div class="col-xs-12 col-sm-2 col-md-2"><img src="images/ico_curso.jpg" alt=""></div>
+        <div class="col-xs-12 col-sm-10 col-md-10">
+          <h4><%=rsCursos("nome")%></h4>
+          <p><%=rsCursos("resumo")%></p>
+          <button type="button" class="btn btn-vermelho" style="margin-bottom:20px" onclick="location.href='cursos_interna.asp?id=<%=rsCursos("id")%>'">Veja mais</button>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-3 centraliza">
-          <img src="images/sentenca.png" alt="Sentença" style="margin-bottom:20px">
-          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <button type="button" class="btn btn-verde" style="margin-bottom:20px" onclick="location.href='sentenca.asp'">Veja mais</button>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-3 centraliza">
-          <img src="images/preparatorio.png" alt="Preparatório oral" style="margin-bottom:20px">
-          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <button type="button" class="btn btn-azul" style="margin-bottom:20px" onclick="location.href='prep_oral.asp'">Veja mais</button>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-3 centraliza">
-          <img src="images/acompanhamento.png" alt="Acompanhamento 24horas" style="margin-bottom:20px">
-          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <button type="button" class="btn btn-amarelo" style="margin-bottom:20px" onclick="location.href='acompanhamento.asp'">Veja mais</button>
-        </div>
-      </div>			
+      </div>
+      <%
+      rsCursos.MoveNext()
+      wend
+      rsCursos.Close()
+      set rsCursos = nothing            
+      %>
+      
+
  		</div>
  	</section> <!-- conteudo /-->
 

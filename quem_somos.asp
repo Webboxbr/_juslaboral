@@ -1,3 +1,4 @@
+<!--#include file="admin/conexao.asp" -->
 <!DOCTYPE HTML>
 <html lang="pt-br">
 <head>
@@ -46,11 +47,24 @@
  	<section id="conteudo" class="internas">
  		<div class="container">
  			<div class="row">
- 				<div class="col-xs-12 col-sm-12 col-md-12">
- 					<h2 class="cinza"><span id="ico14"></span>Quem Somos</h2>
- 					<p>UT ENIM AD MINIM VENIAM, ULLAMCO LABORIS  EX EA COMMODO CONSEQUAT.</p>
- 					<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
- 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+ 				<div class="col-xs-12 col-sm-12 col-md-12 justifica">
+ 					<h2 class="cinza"><span id="ico14"></span>Juslaboral</h2>
+ 					
+<p>Olá!<br>
+Sejam bem vindos ao site do Curso Juslaboral. Pedimos licença para tecer algumas linhas do que representa nosso projeto.</p>
+
+<p>Sabemos bem o quão árdua é essa longa e tortuosa jornada, permeada, não raro, de progressos e aparentes retrocessos, que tanto confundem nossas mentes. Por isto mesmo, estamos aqui dispostos a oferecer toda a energia e suporte necessários para não permitir que desistam dos seus sonhos!</p>
+
+<p>Cada um que adentra a este espaço possui uma trajetória de vida diferente, uma experiência profissional distinta e dificuldades pessoais igualmente díspares, mas certamente possuem em comum a perseguição de um mesmo objetivo e pelo qual nos honraríamos em poder colaborar. Os professores deste Curso passaram pelas mais diversas dificuldades e pretendem contribuir com essas experiências na construção e realização do sonho de futuros colegas, oferecendo um curso que alie, além de um excelente suporte para as fases do concurso, uma companhia parceira nessa caminhada.</p>
+
+<p>Nosso ideal é oferecer um trabalho humano, completo e cúmplice para que vocês se sintam acolhidos e acompanhados, pois o que almejamos é auxiliar e, principalmente, caminhar juntos nessa busca pela aprovação. Somos, antes de mais nada, apaixonados pelo que fazemos, não nos referindo apenas sobre a paixão pela magistratura, mas também sobre o fascínio pela docência e pela possibilidade de fazer por vocês o que gostaríamos que tivessem feito por nós.</p>
+
+<p>É isso, adentrem ao mundo do Curso Juslaboral, um jeito diferente de aprovar!<br>
+Para nos conhecerem um pouco melhor, acessem o link professores.</p>
+
+<p>Um fraterno abraço!<br>
+<b>Equipe Juslaboral.</b></p>
+
 
  				</div>				
  			</div> 			

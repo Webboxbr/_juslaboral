@@ -1,3 +1,4 @@
+<!--#include file="admin/conexao.asp" -->
 <!DOCTYPE HTML>
 <html lang="pt-br">
 <head>
@@ -53,7 +54,49 @@ padding-top: 10px;
 
 
 </head>
-<body> 
+<body>
+
+<%
+'-----------------------------------------------------
+'Nome: RemoveHTMLTags(ByVal strHTML)
+'Tipo: Funcao
+'Sinopse: Remove todas as tags HTML de uma string
+'Parametros:
+'   strHTML: String com as tags HTML a serem retiradas
+'Retorno: String
+'Autor: Gabriel Fróes - www.codigofonte.com.br
+'-----------------------------------------------------
+Function RemoveHTMLTags(ByVal strHTML)
+    Dim objER
+    Dim strTexto
+ 
+    'Configurando o objeto de Expressão Regular
+    Set objER            = New RegExp 
+    objER.IgnoreCase    = True
+    objER.Global        = True
+    objER.Pattern        = "<[^>]*>"
+    
+    'Substituindo as tags encontradas pela expressão
+    strTexto            = strHTML
+    strTexto            = objER.Replace(strTexto, "")
+    
+    Set objER            = Nothing
+ 
+    'Retornando a função
+    RemoveHTMLTags = strTexto
+End Function
+ 
+'-----------------------------------------------------
+'Exemplo de chamada da função
+'-----------------------------------------------------
+'Dim HTML
+'HTML = "<font face='verdana' size='2'>teste</font> da função de retira as <b>TAGS</b> <font color='red'>HTML</font><br>"
+'Texto com TAG
+'Response.Write HTML
+'Texto sem TAG
+'Response.Write RemoveHTMLTags(HTML)
+%>
+
 
 <!-- facebook Caixa Curtir /-->
 <div id="fb-root"></div>
@@ -73,7 +116,7 @@ padding-top: 10px;
  			<div class="row">
  				<div class="col-xs-12 col-sm-12 col-md-12">
  					<h2 class="cinza"><span id="ico23"></span>Depoimentos</h2>
- 					<p>UT ENIM AD MINIM VENIAM, ULLAMCO LABORIS  EX EA COMMODO CONSEQUAT.</p>
+ 					<!--<p>UT ENIM AD MINIM VENIAM, ULLAMCO LABORIS  EX EA COMMODO CONSEQUAT.</p>-->
  				</div>				
  			</div> 			
  		</div>
@@ -88,56 +131,96 @@ padding-top: 10px;
         </div>        
       </div>
       <div class="row" style="margin-top:20px;">
-        <div class="col-xs-12 col-sm-12 col-md-4 it centraliza botao" data-toggle="modal" data-target="#myModal">
+
+
+        <%
+        Set rsDepoimentos = Server.CreateObject("ADODB.Recordset")
+        rsDepoimentos.Open "select * from "&prefixoTabela&"depoimento where ativo='s' and destaque='s' order by id desc limit 3", Conexao
+        
+        while not rsDepoimentos.eof
+
+        Dim depoimento
+        depoimento = rsDepoimentos("texto")
+        depoimento_resumo = RemoveHTMLTags(depoimento)
+
+        %> 
+        <div class="col-xs-12 col-sm-12 col-md-4 it centraliza botao" data-toggle="modal" data-target="#myModal<%=rsDepoimentos("id")%>">
           <div class="cap-foto">
             <img class="mask" src="images/mask_exagono.png" alt="">
-            <img class="foto" src="images/foto_dep_1.png" alt="">
+            <img class="foto" src="<%=enderecoDepoimentoTh%><%=rsDepoimentos("arquivo")%>" alt="">
           </div>          
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <p><b>Aline Mello- DF</b></p>
+          <p><%=tamTexto(depoimento_resumo,480)%></p>
+          <p><b><%=rsDepoimentos("nome")%></b></p>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-4 it centraliza botao" data-toggle="modal" data-target="#myModal">
-          <div class="cap-foto">
-            <img class="mask" src="images/mask_exagono.png" alt="">
-            <img class="foto" src="images/foto_dep_2.png" alt="">
-          </div>          
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <p><b>Victor Gonçalves Guimerães - PR</b></p>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-4 it centraliza botao" data-toggle="modal" data-target="#myModal">
-          <div class="cap-foto">
-            <img class="mask" src="images/mask_exagono.png" alt="">
-            <img class="foto" src="images/foto_dep_3.png" alt="">
-          </div> 
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <p><b>Jorge Silva - SP</b></p>
-        </div>
+
+
+<!-- Modal /-->
+<div class="modal fade" id="myModal<%=rsDepoimentos("id")%>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+        <h4 class="modal-title" id="myModalLabel"><%=rsDepoimentos("nome")%></h4>
+      </div>
+      <div class="modal-body">
+          <div class="row">
+            <div class="col-xs-12 col-sm-3 col-md-3">
+              <div class="cap-foto">
+                <img class="mask" src="images/mask_exagono.png" alt="" width="140px">
+                <img class="foto" src="<%=enderecoDepoimentoTh%><%=rsDepoimentos("arquivo")%>" alt="" width="140px">
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-9 col-md-9 it">
+              <%=depoimento%>
+              <p><b><%=rsDepoimentos("nome")%></b></p>
+            </div>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-amarelo" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  $('#myModal<%=rsDepoimentos("id")%>').on('hidden.bs.modal', function (e) {
+      // do something...
+  })
+</script>
+
+
+        <%
+        rsDepoimentos.MoveNext()
+        wend
+        rsDepoimentos.Close()
+        set rsDepoimentos = nothing            
+        %>
+        
+        
       </div>
       <div class="row centraliza" style="margin-top:15px; margin-bottom:30px;">
-        <button type="button" class="btn btn-amarelo">Veja mais</button>
+        <!--<button type="button" class="btn btn-amarelo">Veja mais</button>-->
       </div>
 
       
       <div style="heigth:30px;"></div>
 
-      <div id="panel1" class="panel hidden1 content1">
-        <div id="toggle1" class="toggle">
+
+      <%
+      Set rsOutrosDepoimentos = Server.CreateObject("ADODB.Recordset")
+      rsOutrosDepoimentos.Open "select * from "&prefixoTabela&"depoimento where ativo='s' and destaque='n' order by id desc", Conexao
+      
+      while not rsOutrosDepoimentos.eof
+      %>
+      <div id="panel<%=rsOutrosDepoimentos("id")%>" class="panel hidden1 content1">
+        <div id="toggle<%=rsOutrosDepoimentos("id")%>" class="toggle">
           <div class="row">
             <div class="col-xs-12">
               <table>
-                <tr>
+                <tr class="it cinza-p">
                   <td width="54px" valign="top"><span id="ico24"></span></td>
-                  <td>
-                    <p>Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi adipiscing elit. Donec sed gravida dolor. Fusce aliquam, urna sit amet luctus adipiscing, massa sem venenatis dui, quis accumsan mi orci eu orci. Mauris nec massa non mi iaculis tincidunt 
-                    eget a lectus. Curabitur suscipit, magna vel laoreet volutpat, sem mauris placerat risus, nec pretium mauris orci non dui.</p>
-
-                    <p>Cras in massa dapibus leo tincidunt molestie nec ut sem. Aenean sit amet ipsum risus. Class aptent taciti sociosqu 
-                    ad litora torquent per conubia nostra, per inceptos himenaeos. Cras vitae erat at magna volutpat consequat ut a justo. 
-                    Mauris dapibus dolor at orci placerat congue. Praesent facilisis sodales molestie. Quisque eget lacus eget justo aliquet
-                    sagittis. Duis sed elit id dui semper feugiat. Vivamus risus magna, facilisis at hendrerit sit amet, accumsan nec felis.</p>
-
-                    <p>Nunc massa tellus, fringilla ut tincidunt consequat, ultricies eget nunc. </p>
-                  </td>
+                  <td><b><%=rsOutrosDepoimentos("nome")%></b><br>
+                  <%=rsOutrosDepoimentos("texto")%></td>
                 </tr>
               </table>
             </div>
@@ -145,76 +228,14 @@ padding-top: 10px;
         </div><!-- /content -->
       </div><!-- /panel -->
 
-      <div id="panel2" class="panel hidden1 content1">
-        <div id="toggle2" class="toggle">
-          <div class="row">
-            <div class="col-xs-12">
-              <table>
-                <tr>
-                  <td width="54px" valign="top"><span id="ico24"></span></td>
-                  <td>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed gravida dolor. Fusce aliquam, urna sit amet 
-                    luctus adipiscing, massa sem venenatis dui, quis accumsan mi orci eu orci. Mauris nec massa non mi iaculis tincidunt 
-                    eget a lectus. Curabitur suscipit, magna vel laoreet volutpat, sem mauris placerat risus, nec pretium mauris orci non dui.</p>
 
-                    <p>Cras in massa dapibus leo tincidunt molestie nec ut sem. Aenean sit amet ipsum risus. Class aptent taciti sociosqu 
-                    ad litora torquent per conubia nostra, per inceptos himenaeos. Cras vitae erat at magna volutpat consequat ut a justo. 
-                    Mauris dapibus dolor at orci placerat congue. Praesent facilisis sodales molestie. Quisque eget lacus eget justo aliquet
-                    sagittis. Duis sed elit id dui semper feugiat. Vivamus risus magna, facilisis at hendrerit sit amet, accumsan nec felis.</p>
 
-                    <p>Nunc massa tellus, fringilla ut tincidunt consequat, ultricies eget nunc. </p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed gravida dolor. Fusce aliquam, urna sit amet 
-                    luctus adipiscing, massa sem venenatis dui, quis accumsan mi orci eu orci. Mauris nec massa non mi iaculis tincidunt 
-                    eget a lectus. Curabitur suscipit, magna vel laoreet volutpat, sem mauris placerat risus, nec pretium mauris orci non dui.</p>
-
-                    <p>Cras in massa dapibus leo tincidunt molestie nec ut sem. Aenean sit amet ipsum risus. Class aptent taciti sociosqu 
-                    ad litora torquent per conubia nostra, per inceptos himenaeos. Cras vitae erat at magna volutpat consequat ut a justo. 
-                    Mauris dapibus dolor at orci placerat congue. Praesent facilisis sodales molestie. Quisque eget lacus eget justo aliquet
-                    sagittis. Duis sed elit id dui semper feugiat. Vivamus risus magna, facilisis at hendrerit sit amet, accumsan nec felis.</p>
-
-                    <p>Nunc massa tellus, fringilla ut tincidunt consequat, ultricies eget nunc. </p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed gravida dolor. Fusce aliquam, urna sit amet 
-                    luctus adipiscing, massa sem venenatis dui, quis accumsan mi orci eu orci. Mauris nec massa non mi iaculis tincidunt 
-                    eget a lectus. Curabitur suscipit, magna vel laoreet volutpat, sem mauris placerat risus, nec pretium mauris orci non dui.</p>
-
-                    <p>Cras in massa dapibus leo tincidunt molestie nec ut sem. Aenean sit amet ipsum risus. Class aptent taciti sociosqu 
-                    ad litora torquent per conubia nostra, per inceptos himenaeos. Cras vitae erat at magna volutpat consequat ut a justo. 
-                    Mauris dapibus dolor at orci placerat congue. Praesent facilisis sodales molestie. Quisque eget lacus eget justo aliquet
-                    sagittis. Duis sed elit id dui semper feugiat. Vivamus risus magna, facilisis at hendrerit sit amet, accumsan nec felis.</p>
-
-                    <p>Nunc massa tellus, fringilla ut tincidunt consequat, ultricies eget nunc. </p>
-                  </td>
-                </tr>
-              </table>
-            </div>
-          </div>         
-        </div><!-- /content -->
-      </div><!-- /panel -->
-
-      <div id="panel3" class="panel hidden1 content1">
-        <div id="toggle3" class="toggle">
-          <div class="row">
-            <div class="col-xs-12">
-              <table>
-                <tr>
-                  <td width="54px" valign="top"><span id="ico24"></span></td>
-                  <td>
-                    <p>Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi adipiscing elit. Donec sed gravida dolor. Fusce aliquam, urna sit amet luctus adipiscing, massa sem venenatis dui, quis accumsan mi orci eu orci. Mauris nec massa non mi iaculis tincidunt 
-                    eget a lectus. Curabitur suscipit, magna vel laoreet volutpat, sem mauris placerat risus, nec pretium mauris orci non dui.</p>
-
-                    <p>Cras in massa dapibus leo tincidunt molestie nec ut sem. Aenean sit amet ipsum risus. Class aptent taciti sociosqu 
-                    ad litora torquent per conubia nostra, per inceptos himenaeos. Cras vitae erat at magna volutpat consequat ut a justo. 
-                    Mauris dapibus dolor at orci placerat congue. Praesent facilisis sodales molestie. Quisque eget lacus eget justo aliquet
-                    sagittis. Duis sed elit id dui semper feugiat. Vivamus risus magna, facilisis at hendrerit sit amet, accumsan nec felis.</p>
-
-                    <p>Nunc massa tellus, fringilla ut tincidunt consequat, ultricies eget nunc. </p>
-                  </td>
-                </tr>
-              </table>
-            </div>
-          </div>         
-        </div><!-- /content -->
-      </div><!-- /panel -->
+      <%
+      rsOutrosDepoimentos.MoveNext()
+      wend
+      rsOutrosDepoimentos.Close()
+      set rsOutrosDepoimentos = nothing            
+      %>      
 
     </div>
   </section> <!-- depoimentos /-->
@@ -225,29 +246,7 @@ padding-top: 10px;
  	
  	<!--#include file="_includes/_rodape.asp" --> 
 
-<!-- Modal /-->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">Aline Mello- DF</h4>
-      </div>
-      <div class="modal-body">
-          <div class="row">
-            <div class="col-xs-12 col-sm-3 col-md-3"><img src="images/foto_dep_1.png" alt=""></div>
-            <div class="col-xs-12 col-sm-9 col-md-9">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <p><b>Aline Mello- DF</b></p>
-            </div>
-          </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-amarelo" data-dismiss="modal">Fechar</button>
-      </div>
-    </div>
-  </div>
-</div>    
+
 
 <!-- início do javascript /-->
 
@@ -257,31 +256,50 @@ padding-top: 10px;
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
 
-
-
-<script type="text/javascript"> 
-
+<%
+Set rsOutrosDepoimentos = Server.CreateObject("ADODB.Recordset")
+rsOutrosDepoimentos.Open "select * from "&prefixoTabela&"depoimento where ativo='s' and destaque='n' order by id desc", Conexao
+while not rsOutrosDepoimentos.eof
+%>
+<script type="text/javascript">
 jQuery(document).ready(function(){
-  jQuery('#toggle1').click(function(){
-    jQuery('#panel1').toggleClass( "hidden1", 300, "easeOutSine" );
-  });
-  jQuery('#toggle2').click(function(){
-    jQuery('#panel2').toggleClass( "hidden1", 300, "easeOutSine" );
-  });
-  jQuery('#toggle3').click(function(){
-    jQuery('#panel3').toggleClass( "hidden1", 300, "easeOutSine" );
+  jQuery('#toggle<%=rsOutrosDepoimentos("id")%>').click(function(){
+    jQuery('#panel<%=rsOutrosDepoimentos("id")%>').toggleClass( "hidden1", 300, "easeOutSine" );
   });
 });
-
-
-  $('#myModal').on('hidden.bs.modal', function (e) {
-      // do something...
-  })
-
-
 </script>
+<%
+rsOutrosDepoimentos.MoveNext()
+wend
+rsOutrosDepoimentos.Close()
+set rsOutrosDepoimentos = nothing            
+%> 
 
 
+<%
+'****************************************************************************************************
+' FUNÇÃO PARA RESUMO DE TEXTOS
+'****************************************************************************************************
+function tamTexto(texto, y)
+  if len(trim(texto)) > y Then  'Só executa se o texto for maior que o tamanho determinado
+    Aux = mid(texto, 1, y) 'Pega a parte do texto do tamanho que voce determinou na chamada da função...
+    Aux = Aux & " ..."  'Acrescenta as reticências
+  else
+    Aux = texto  'Exibe o texto sem cortes
+  end if
+  tamTexto = Aux  'Passa o valor para a função.
+end function
+'texto="Este recurso é muito útil para quando voce quizer exibir apenas parte de um determinado texto na tela..."
+'response.write "Texto original: " & texto & "<br>"
+'response.write "Tamanho do texto: " & len(trim(texto)) & "<br>"
+'response.write "<BR>Texto a ser exibido pela função<HR>" & tamTexto(texto,30) & "<HR>"
+'****************************************************************************************************
+' FUNÇÃO PARA RESUMO DE TEXTOS
+'****************************************************************************************************
+%>
 
+<%
+Conexao.Close()
+%>
 </body>
 </html>

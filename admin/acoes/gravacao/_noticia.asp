@@ -11,24 +11,16 @@ if act="1" then
 	nome = request.Form("txtNome")
 	data = request.Form("txtData")
 	texto = request.Form("txtTexto")
+	link = request.Form("txtLink")
 
-	if data<>"" then
-	myarray = split(data,"/")
-	dia = myarray(0)
-	mes = myarray(1)
-	ano = myarray(2)
-	else
-	dia = Day(Date())
-	mes = Month(Date())
-	ano = Year(Date())
-	end if
+	
 	
 
     datasys = now()
 	ultima_alteracao = datasys&" - "&session("user")
 
 	set addRs=Server.CreateObject("ADODB.recordset")
-	addSQL = "INSERT INTO "&prefixoTabela&"noticia (nome, data, dia, mes, ano, texto, ultima_alteracao) values ('"&nome&"','"&data&"','"&dia&"','"&mes&"','"&ano&"','"&texto&"','"&ultima_alteracao&"')"
+	addSQL = "INSERT INTO "&prefixoTabela&"noticia (nome, data, dia, mes, ano, texto, link, ultima_alteracao) values ('"&nome&"','"&data&"','"&dia&"','"&mes&"','"&ano&"','"&texto&"','"&link&"','"&ultima_alteracao&"')"
 	addRs.open addSQL, Conexao
 			
 
@@ -39,17 +31,9 @@ elseif act="2" then
 	nome = request.Form("txtNome")
 	data = request.Form("txtData")
 	texto = request.Form("txtTexto")
+	link = request.Form("txtLink")
 
-	if data<>"" then
-	myarray = split(data,"/")
-	dia = myarray(0)
-	mes = myarray(1)
-	ano = myarray(2)
-	else
-	dia = Day(Date())
-	mes = Month(Date())
-	ano = Year(Date())
-	end if
+	
 	
 
     datasys = now()
@@ -57,7 +41,7 @@ elseif act="2" then
 
 
 	set addRs=Server.CreateObject("ADODB.recordset")
-	editSQL = "UPDATE "&prefixoTabela&"noticia SET nome='"&nome&"', data='"&data&"', dia='"&dia&"', mes='"&mes&"', ano='"&ano&"', texto='"&texto&"', ultima_alteracao='"&ultima_alteracao&"' WHERE id="&id
+	editSQL = "UPDATE "&prefixoTabela&"noticia SET nome='"&nome&"', data='"&data&"', dia='"&dia&"', mes='"&mes&"', ano='"&ano&"', texto='"&texto&"', link='"&link&"', ultima_alteracao='"&ultima_alteracao&"' WHERE id="&id
 	addRs.open editSQL, Conexao
 	
 

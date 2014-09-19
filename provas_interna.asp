@@ -1,3 +1,11 @@
+<!--#include file="admin/conexao.asp" -->
+<%
+fase = request.querystring("f")
+
+if fase>"3" or fase<"1" then
+fase = "1"
+end if
+%>
 <!DOCTYPE HTML>
 <html lang="pt-br">
 <head>
@@ -47,9 +55,8 @@
  		<div class="container">
  			<div class="row">
  				<div class="col-xs-12 col-sm-12 col-md-12">
- 					<h2 class="cinza"><span id="ico20"></span>Provas 1ª Fase</h2>
- 					<p>UT ENIM AD MINIM VENIAM, ULLAMCO LABORIS  EX EA COMMODO CONSEQUAT.</p>
- 					<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 					
+ 					<h2 class="cinza"><span id="ico20"></span>Provas <%=fase%>ª Fase</h2>
+ 					<p>Selecione a prova desejada e clique no ícone para visualizá-la.</p> 									
  				</div>				
  			</div> 
 
@@ -62,53 +69,69 @@
           
 
           <div class="panel-group" id="accordion" style="margin-top:30px">
+
+
+            <%
+            Set rsProvas = Server.CreateObject("ADODB.Recordset")
+            if fase="1" then
+            rsProvas.Open "select * from "&prefixoTabela&"primeira_fase where ativo='s' order by id desc", Conexao
+            elseif fase="2" then
+            rsProvas.Open "select * from "&prefixoTabela&"segunda_fase where ativo='s' order by id desc", Conexao
+            elseif fase="3" then
+            rsProvas.Open "select * from "&prefixoTabela&"terceira_fase where ativo='s' order by id desc", Conexao
+            end if
+
+            dim contador
+            contador = 1
+            while not rsProvas.eof
+
+            if contador = 1 then
+            statusBloco = "in"
+            else
+            statusBloco = "out"
+            end if
+            %>
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h4 class="panel-title">
-                  <span class="ico21"></span><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">TRT - 1ª Região - Rio de Janeiro (1ª FASE)</a>
+                  <span class="ico21"></span><a data-toggle="collapse" data-parent="#accordion" href="#collapse<%=rsProvas("id")%>"><%=rsProvas("nome")%></a>
                 </h4>
               </div>
-              <div id="collapseOne" class="panel-collapse collapse in">
+              <div id="collapse<%=rsProvas("id")%>" class="panel-collapse collapse <%=statusBloco%>">
                 <div class="panel-body">
-                  <ul>      
-                    <li>Lorem ipsum dolor sit amet</li>
-                    <li>Consectetur adipisicing elit, sed do eiusmod tempor </li>
-                    <li>Incididunt ut labore et dolore magna aliqua</li>
-                    <li>Ut enim ad minim veniam, quis nostrud exercitation </li>
-                    <li>Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
+                  <ul>
+                    <%
+                    Set rsArquivo = Server.CreateObject("ADODB.Recordset")
+                    if fase="1" then
+                    rsArquivo.Open "select * from "&prefixoTabela&"arquivo_1 where ativo='s' and idFase="&rsProvas("id")&" order by id desc", Conexao
+                    elseif fase="2" then
+                    rsArquivo.Open "select * from "&prefixoTabela&"arquivo_2 where ativo='s' and idFase="&rsProvas("id")&" order by id desc", Conexao
+                    elseif fase="3" then
+                    rsArquivo.Open "select * from "&prefixoTabela&"arquivo_3 where ativo='s' and idFase="&rsProvas("id")&" order by id desc", Conexao
+                    end if
+
+                    while not rsArquivo.eof
+                    %>
+                      <li><a href="<%=enderecoArquivo%><%=rsArquivo("arquivo")%>" class="link"><%=rsArquivo("nome")%></a></li>
+                    <%
+                    rsArquivo.MoveNext()                    
+                    wend
+                    rsArquivo.Close()
+                    set rsArquivo = nothing            
+                    %>
                   </ul>
                 </div>
               </div>
             </div>
-
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <span class="ico21"></span><a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">TRT - 1ª Região - Rio de Janeiro (1ª FASE)</a>
-                </h4>
-              </div>
-              <div id="collapseTwo" class="panel-collapse collapse">
-                <div class="panel-body">
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                </div>
-              </div>
-            </div>
-
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <span class="ico21"></span><a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">TRT - 1ª Região - Rio de Janeiro (1ª FASE)</a>
-                </h4>
-              </div>
-              <div id="collapseThree" class="panel-collapse collapse">
-                <div class="panel-body">
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                </div>
-              </div>
-            </div>
+            <%
+            rsProvas.MoveNext()
+            contador = contador+1
+            wend
+            rsProvas.Close()
+            set rsProvas = nothing
+            %>
 
           </div>
-
 
         </div>
       </div>
@@ -132,5 +155,8 @@ $('#myCollapsible').on('hidden.bs.collapse', function () {
 })  
 </script>
 
+<%
+Conexao.Close()
+%>
 </body>
 </html>

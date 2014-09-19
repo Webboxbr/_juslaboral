@@ -1,3 +1,4 @@
+<!--#include file="admin/conexao.asp" -->
 <!DOCTYPE HTML>
 <html lang="pt-br">
 <head>
@@ -48,80 +49,191 @@
  			<div class="row">
  				<div class="col-xs-12 col-sm-12 col-md-12">
  					<h2 class="cinza"><span id="ico15"></span>Professores</h2>
- 					<p>UT ENIM AD MINIM VENIAM, ULLAMCO LABORIS  EX EA COMMODO CONSEQUAT.</p>
- 					<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
- 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+ 					<p>Conheça os profissionais que lutarão com você pela sua aprovação até o final!</p> 					
  				</div>				
  			</div>
  			<div class="row" style="margin-top:60px;">
- 				<div class="col-xs-12 col-sm-12 col-md-4 centraliza botao" data-toggle="modal" data-target="#myModal">
+ 				<div class="col-xs-12 col-sm-12 col-md-4 centraliza">
  					<div class="bg-cinza">
 	 					<div class="cap-foto">
 	 						<img class="mask" src="images/mask_exagono2.png" alt="">
-	 						<img class="foto" src="images/foto_dep_1.png" alt="">
+	 						<img class="foto" src="images/professores/iuri.jpg" alt="">
 	 					</div>
-	 					<p>JAQUELINE VIEIRA</p>					
-	 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	 					<div><img src="images/face.jpg" alt=""></div>
+	 					<p>IURI PEREIRA PINHEIRO (Levenhagen do CorreioWeb)</p>					
+	 					
+	 						<ul class="esquerda">
+								<li>Juiz do Trabalho do TRT da 15ª Região</li>
+								<li>Aprovado em 10 provas discursivas para a magistratura do trabalho.</li>
+								<li>Graduado em Direito pela Universidade de Fortaleza </li>
+								<li>Especialista em Direito e Processo do Trabalho pela Universidade de Anhanguera</li>
+								<li>Professor Especializado na preparação de candidatos para Magistratura do Trabalho. </li>
+								<li>Professor convidado da Pós-Graduação da Universidade de Piracicaba</li>
+								<li>Ex-Assessor de Ministro do Tribunal Superior do Trabalho</li>
+								<li>Ex-Assessor de Desembargador nos TRTs da 2ª e 7ª Regiões</li>
+								<li>Ex-Assistente de Juízes no âmbito dos TRTs da 2ª, 7ª e 9ª Regiões</li>
+								<li>Escritor de vários artigos científicos e do livro “Apontamentos sobre a execução trabalhista” - Registro ISBN 978-85-7872-185-5. </li>
+								<li>Coautor da obra Estudos Aprofundados para Magistratura do Trabalho, Editora Jus Podivm, V. 2, 2014. </li>
+							</ul>
+							
+
+							<ul class="social">
+								<li><a href="mailto:iuripinheiro@cursojuslaboral.com.br"><img src="images/mail.jpg" alt=""></a></li>
+								<li><a href=""><img src="images/face.jpg" alt=""></a></li>
+							</ul>	 					
+	 					
 	 				</div>
  				</div>
- 				<div class="col-xs-12 col-sm-12 col-md-4 centraliza botao" data-toggle="modal" data-target="#myModal">
+ 				<div class="col-xs-12 col-sm-12 col-md-4 centraliza">
  					<div class="bg-cinza">
 	 					<div class="cap-foto">
 	 						<img class="mask" src="images/mask_exagono2.png" alt="">
-	 						<img class="foto" src="images/foto_dep_1.png" alt="">
+	 						<img class="foto" src="images/professores/giovani.jpg" alt="">
 	 					</div>
-	 					<p>JAQUELINE VIEIRA</p> 					
-	 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	 					<div><img src="images/face.jpg" alt=""></div>
+	 					<p>GIOVANE BRZOSTEK  (Polsk do CorreioWeb)</p> 					
+	 					
+	 						<ul class="esquerda">
+								<li>Juiz do Trabalho do TRT da 2ª Região</li>
+								<li>Graduado em Direito pela Universidade de Passo Fundo - UPF</li>
+								<li>Especialista em Direito do Trabalho e Direito Previdenciário pela Universidade de Passo Fundo  - UPF</li>
+								<li>Foi Técnico e Analista Judiciário. </li>
+								<li>Ex-Assistente de Juiz no TRT da 4ª Região</li>
+								<li>Ex-Assessor de Desembargador do Trabalho em Dissídios Individuais e Coletivos no TRT da 4ª Região.</li>
+								<li>Ex-Assessor da Presidência do TRT da 4ª Região.</li>
+							</ul>
+
+							
+								 
+							<ul class="social">
+								<li><a href="mailto:giovane@cursojuslaboral.com.br"><img src="images/mail.jpg" alt=""></a></li>
+								<!--<li><a href=""><img src="images/face.jpg" alt=""></a></li>-->
+							</ul>					
+	 					
 	 				</div>
  				</div>
- 				<div class="col-xs-12 col-sm-12 col-md-4 centraliza botao" data-toggle="modal" data-target="#myModal">
+ 				<div class="col-xs-12 col-sm-12 col-md-4 centraliza">
  					<div class="bg-cinza">
 	 					<div class="cap-foto">
 	 						<img class="mask" src="images/mask_exagono2.png" alt="">
-	 						<img class="foto" src="images/foto_dep_1.png" alt="">
+	 						<img class="foto" src="images/professores/semfoto.jpg" alt="">
 	 					</div>
-	 					<p>JAQUELINE VIEIRA</p>					
-	 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	 					<div><img src="images/face.jpg" alt=""></div>
+	 					<p>MARCEL DE AVILA SOARES MARQUES</p>					
+	 					
+	 					<ul class="esquerda">
+						<li>Juiz do Trabalho do TRT da 15ª Região</li>
+						<li>Bacharel em Ciências Jurídicas e Sociais pela Faculdade de Direito da Universidade Federal de Santa Maria/RS – 2006.         </li>
+						<li>Pós-graduado em Direito do Trabalho e Processo do Trabalho pela Femargs – vinculado ao TRT4 - 2008.</li>
+						<li>Especialização em Direito Previdenciário pelo Instituto Luiz Flávio Gomes – 2008</li>
+						<li>Especialização em postura comportamental e oratória.</li>
+						<li>Lecionou na Faculdade de Direito do Centro Universitário Franciscano – UNIFRA – Santa Maria/RS</li>
+						<li>Lecionou na Faculdade de Direito da UniRitter – Porto Alegre.</li>
+						<li>Professor do quadro efetivo da Pós Graduação em Direito do Trabalho da Faculdade Dom Bosco.</li>
+						<li>Professor de Direito do Trabalho e Processo do Trabalho do Ecocursos – Ensino à Distância.</li>
+						<li>Atuou como advogado por sete anos, como sócio do Aranalde Advogados Associados / Santa Maria / Porto Alegre, tendo se especializado em Sustentações Orais perante o TST e TRT4, TRF4 e TJRS.</li>
+						</ul>
+											
+						<ul class="social">
+							<li><a href="mailto:marcelmarques@cursojuslaboral.com.br"><img src="images/mail.jpg" alt=""></a></li>
+							<!--<li><a href=""><img src="images/face.jpg" alt=""></a></li>-->
+						</ul>
+
 	 				</div>
  				</div>
  			</div>
  			<div class="row">
- 				<div class="col-xs-12 col-sm-12 col-md-4 centraliza botao" data-toggle="modal" data-target="#myModal">
+ 				<div class="col-xs-12 col-sm-12 col-md-4 centraliza">
  					<div class="bg-cinza">
 	 					<div class="cap-foto">
 	 						<img class="mask" src="images/mask_exagono2.png" alt="">
-	 						<img class="foto" src="images/foto_dep_1.png" alt="">
+	 						<img class="foto" src="images/professores/tiago.jpg" alt="">
 	 					</div>
-	 					<p>JAQUELINE VIEIRA</p>					
-	 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	 					<div><img src="images/face.jpg" alt=""></div>
+	 					<p>THIAGO MIRA DE ASSUMPÇÃO ROSADO</p>					
+	 					<ul class="esquerda">
+						<li>Professor da Pós-Graduação da Ematra9 - Escola da Magistratura </li>
+						<li>Tutor habilitado em Ensino à Distância</li>
+						<li>Ex-servidor do TRT da 9ª Região</li>
+						<li>Experiência na preparação para a 1ª Prova Discursiva da Magistratura em diversos cursos jurídicos</li>
+						<li>Aprovado em todas as 6 provas discursivas que havia feito até a aprovação para prova oral do TRT9 (100% de aproveitamento nesta fase do certame).</li>
+						</ul>
+
+	 					
+	 					<ul class="social">
+							<!--<li><a href="mailto:"><img src="images/mail.jpg" alt=""></a></li>
+							<li><a href=""><img src="images/face.jpg" alt=""></a></li>-->
+						</ul>
+
 	 				</div>
  				</div>
- 				<div class="col-xs-12 col-sm-12 col-md-4 centraliza botao" data-toggle="modal" data-target="#myModal">
+
+ 				<div class="col-xs-12 col-sm-12 col-md-4 centraliza">
  					<div class="bg-cinza">
 	 					<div class="cap-foto">
 	 						<img class="mask" src="images/mask_exagono2.png" alt="">
-	 						<img class="foto" src="images/foto_dep_1.png" alt="">
+	 						<img class="foto" src="images/professores/italo.jpg" alt="">
 	 					</div>
-	 					<p>JAQUELINE VIEIRA</p>
-	 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	 					<div><img src="images/face.jpg" alt=""></div>
+	 					<p>ITALO MENEZES DE CASTRO</p>
+
+	 					<ul class="esquerda">
+						<li>Juiz do Trabalho do TRT da 2ª Região</li>
+						<li>Bacharel em Direito pela Universidade Federal do Ceará</li>
+						<li>Professor de Curso Preparatório para Magistratura do Trabalho, com ênfase na prova de sentença</li>
+						<li>Ex-Servidor do TRT da 4ª Região</li>
+						<li>Ex-Assistente de Juiz no TRT da 4ª Região</li>
+						</ul>
+						
+	 					<ul class="social">
+							<!--<li><a href="mailto:"><img src="images/mail.jpg" alt=""></a></li>
+							<li><a href=""><img src="images/face.jpg" alt=""></a></li>-->
+						</ul>
 	 				</div>
  				</div>
- 				<div class="col-xs-12 col-sm-12 col-md-4 centraliza botao" data-toggle="modal" data-target="#myModal">
+
+ 				<div class="col-xs-12 col-sm-12 col-md-4 centraliza">
  					<div class="bg-cinza">
 	 					<div class="cap-foto">
 	 						<img class="mask" src="images/mask_exagono2.png" alt="">
-	 						<img class="foto" src="images/foto_dep_1.png" alt="">
+	 						<img class="foto" src="images/professores/juliana.jpg" alt="">
 	 					</div>
-	 					<p>JAQUELINE VIEIRA</p>
-	 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	 					<div><img src="images/face.jpg" alt=""></div>
+	 					<p>JULIANA DEJAVITE DOS SANTOS </p>
+						<ul class="esquerda">
+						<li>Graduada em Direito pela Universidade Federal do Rio Grande do Norte - UFRN</li>
+						<li>Pós-graduada em Direito pela Escola Superior do Ministério Público do Estado do Ceará - ESMPCE</li>
+						<li>Juíza do Trabalho no Tribunal Regional do Trabalho da 2ª Região, aprovada em 1º lugar na prova oral do XXXVI Concurso da Magistratura</li>
+						<li>Membro da Comissão dos Juízes Substitutos da AMATRA-2</li>
+						</ul>						
+	 					
+	 					<ul class="social">
+							<li><a href="mailto:julianadejavite@cursojuslaboral.com.br"><img src="images/mail.jpg" alt=""></a></li>
+							<!--<li><a href=""><img src="images/face.jpg" alt=""></a></li>-->
+						</ul>
+
 	 				</div>
  				</div>
+
+
+ 				<div class="col-xs-12 col-sm-12 col-md-4 centraliza">
+ 					<div class="bg-cinza">
+	 					<div class="cap-foto">
+	 						<img class="mask" src="images/mask_exagono2.png" alt="">
+	 						<img class="foto" src="images/professores/danilo.jpg" alt="">
+	 					</div>
+	 					<p>DANILO GASPAR</p>
+						<ul class="esquerda">
+						<li>Juiz do Trabalho do Tribunal Regional do Trabalho da 5ª Região (Aprovado em 1º Lugar na Prova Oral do Concurso do TRT da 5ª Região / Aprovado em 1º Lugar na Prova Oral e em 1º Lugar Geral no Concurso do TRT da 22ª Região);</li>
+						<li>Mestre em Direito pela Universidade Federal da Bahia (UFBA);</li>
+						<li>Especialista em Direito e Processo do Trabalho pelo Juspodivm;</li>
+						<li>Professor de Direito e Processo do Trabalho de diversos Cursos de Pós-Graduação em Direito e Processo do Trabalho.</li>
+						</ul>						
+
+	 					<ul class="social">
+							<li><a href="mailto:danilogaspar@cursojuslaboral.com.br"><img src="images/mail.jpg" alt=""></a></li>
+							<!--<li><a href=""><img src="images/face.jpg" alt=""></a></li>-->
+						</ul>
+
+	 				</div>
+ 				</div>
+
+
+ 				
  			</div> 			
  		</div>
  	</section> <!-- conteudo /-->
@@ -130,29 +242,7 @@
  	<!--#include file="_includes/_rodape.asp" --> 
 
 
-<!-- Modal /-->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">Aline Mello- DF</h4>
-      </div>
-      <div class="modal-body">
-        	<div class="row">
-        		<div class="col-xs-12 col-sm-3 col-md-3"><img src="images/foto_dep_1.png" alt=""></div>
-        		<div class="col-xs-12 col-sm-9 col-md-9">
-        			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
- 					<p><b>Aline Mello- DF</b></p>
-        		</div>
-        	</div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-amarelo" data-dismiss="modal">Fechar</button>
-      </div>
-    </div>
-  </div>
-</div>
+
 
 
 
@@ -169,10 +259,6 @@
     	pause: 8000,
     	speed: 500	  
 	});
-
-	$('#myModal').on('hidden.bs.modal', function (e) {
-  		// do something...
-	})
 </script>
 
 

@@ -8,7 +8,7 @@
 
 if act="1" then		
 %>
-	<div><small>1ª Fase</small></div>
+	<div><small>3ª Fase</small></div>
 	<h1>Incluir Região</h1>
 
 	<form id="formCadastro" name="formCadastro" method="POST" action="_gravacao.asp?tipo=7&act=1">
@@ -28,14 +28,14 @@ Set rsPrimeiraFase = Server.CreateObject("ADODB.Recordset")
 rsPrimeiraFase.Open "select * from "&prefixoTabela&"terceira_fase where id="&id, Conexao
 
 %>
-	<div><small>1ª Fase</small></div>
+	<div><small>3ª Fase</small></div>
 	<h1>Incluir Região</h1>
 
 	<form id="formCadastro" name="formCadastro" method="POST" action="_gravacao.asp?tipo=7&act=2&id=<%=id%>">
 			  	
 	  	<div class="form-group">
 	  		<label for="txtNome">Nome(*)</label>
-	    	<input type="text" name="txtNome" id="txtNome" class="form-control" />
+	    	<input type="text" name="txtNome" id="txtNome" class="form-control" value="<%=rsPrimeiraFase("nome")%>" />
 	    </div>
 	    
 		<button type="submit" class="btn btn-primary">Salvar</button>

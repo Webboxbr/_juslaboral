@@ -45,7 +45,7 @@ minuto = Minute(Time())
 			<% elseif tipo="10" then %>
 				<!--#include file="acoes/gravacao/_arquivo_3.asp" -->
 			<% elseif tipo="11" then %>
-				<!-- inclua uma lista -->
+				<!--#include file="acoes/gravacao/_cursos.asp" -->
 			<% elseif tipo="12" then %>
 				<!-- inclua uma lista -->
 			<% elseif tipo="13" then %>

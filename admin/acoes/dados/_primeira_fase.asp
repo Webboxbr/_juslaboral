@@ -35,7 +35,7 @@ rsPrimeiraFase.Open "select * from "&prefixoTabela&"primeira_fase where id="&id,
 			  	
 	  	<div class="form-group">
 	  		<label for="txtNome">Nome(*)</label>
-	    	<input type="text" name="txtNome" id="txtNome" class="form-control" />
+	    	<input type="text" name="txtNome" id="txtNome" class="form-control" value="<%=rsPrimeiraFase("nome")%>" />
 	    </div>
 	    
 		<button type="submit" class="btn btn-primary">Salvar</button>

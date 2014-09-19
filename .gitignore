@@ -4,6 +4,9 @@ $ cat .gitignore
 enviamail_inscricao.asp
 global.asp
 juslaboral.sql
+_caminho.asp
+enviaemail.asp
+web.config
 
 # Use curingas como
 # *~
@@ -12,3 +15,4 @@ juslaboral.sql
 # Ignorar todos os diretórios e arquivos em um diretório.
 # tmp/**/*
 ckeditor/
+uploads/

@@ -16,7 +16,7 @@ if act="1" then
 		<div class="form-group">
 			<label for="txtArquivo">Foto</label>
     		<input name="txtArquivo" type="file" id="txtArquivo" />
-    		<p>Tamanho recomendado para a foto: 800 x 600 pixels</p>
+    		<p>Tamanho recomendado para a foto: 600 x 340 pixels</p>
 	  	</div>	  		    
 	    
 		<button type="submit" class="btn btn-primary">Salvar</button>
@@ -37,7 +37,7 @@ rsGaleria.Open "select * from "&prefixoTabela&"galeria where id="&id, Conexao
 		<div class="form-group">
 			<label for="txtArquivo">Foto</label>
     		<input name="txtArquivo" type="file" id="txtArquivo" />
-    		<p>Tamanho recomendado para a foto: 800 x 600 pixels</p>
+    		<p>Tamanho recomendado para a foto: 600 x 340 pixels</p>
 	  	</div>	     
 	    
 		<button type="submit" class="btn btn-primary">Salvar</button>

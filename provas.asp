@@ -1,3 +1,4 @@
+<!--#include file="admin/conexao.asp" -->
 <!DOCTYPE HTML>
 <html lang="pt-br">
 <head>
@@ -48,8 +49,7 @@
  			<div class="row">
  				<div class="col-xs-12 col-sm-12 col-md-12">
  					<h2 class="cinza"><span id="ico20"></span>Provas</h2>
- 					<p>UT ENIM AD MINIM VENIAM, ULLAMCO LABORIS  EX EA COMMODO CONSEQUAT.</p>
- 					<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 					
+ 					<p>Selecione a fase desejada e clique no ícone para visualizá-la.</p> 										
  				</div>				
  			</div> 
 
@@ -57,9 +57,9 @@
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-6">
           <div class="row">
-            <div class="col-xs-12 col-sm-4 col-md-4 centraliza" style="margin-top:20px"><a href="provas_interna.asp"><img src="images/fase1.jpg" alt=""></a></div>
-            <div class="col-xs-12 col-sm-4 col-md-4 centraliza" style="margin-top:20px"><a href="provas_interna.asp"><img src="images/fase2.jpg" alt=""></a></div>
-            <div class="col-xs-12 col-sm-4 col-md-4 centraliza" style="margin-top:20px"><a href="provas_interna.asp"><img src="images/fase3.jpg" alt=""></a></div>
+            <div class="col-xs-12 col-sm-4 col-md-4 centraliza" style="margin-top:20px"><a href="provas_interna.asp?f=1"><img src="images/fase1.jpg" alt=""></a></div>
+            <div class="col-xs-12 col-sm-4 col-md-4 centraliza" style="margin-top:20px"><a href="provas_interna.asp?f=2"><img src="images/fase2.jpg" alt=""></a></div>
+            <div class="col-xs-12 col-sm-4 col-md-4 centraliza" style="margin-top:20px"><a href="provas_interna.asp?f=3"><img src="images/fase3.jpg" alt=""></a></div>
           </div>
         </div>
       </div>

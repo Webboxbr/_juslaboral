@@ -1,3 +1,4 @@
+<!--#include file="admin/conexao.asp" -->
 <!DOCTYPE HTML>
 <html lang="pt-br">
 <head>
@@ -57,7 +58,7 @@
         <div class="col-xs-12 col-sm-12 col-md-6">
           <div style="height:40px"></div>
 
-          <form id="formContato" name="formContato" method="POST" action="http://www.marinabeatriz.com.br/_juslaboral/enviamail_inscricao.asp">
+          <form id="formContato" name="formContato" method="POST" action="enviamail_inscricao.asp">
             <div class="form-group">
               <label for="nome">Digite seu nome *</label>
               <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome *">
@@ -65,11 +66,19 @@
             <div class="form-group">
               <label for="curso">Curso desejado *</label>
               <select class="form-control" id="curso" name="curso">
-                <option value="0">Curso desejado *</option>
-                <option value="1">Discursiva</option>
-                <option value="2">Sentença</option>
-                <option value="3">Preparatório oral</option>
-                <option value="4">Acompanhamento 24h</option>
+              <option value="0" selected="">Curso desejado *</option>
+                <%
+                Set rsCuroso = Server.CreateObject("ADODB.Recordset")
+                rsCuroso.Open "select * from "&prefixoTabela&"cursos where ativo='s' order by nome asc", Conexao
+                while not rsCuroso.eof
+                %>
+                <option value="<%=rsCuroso("id")%>"><%=rsCuroso("nome")%></option>
+                <%
+                rsCuroso.MoveNext()
+                wend
+                rsCuroso.Close()
+                set rsCuroso = nothing            
+                %>                
               </select>
             </div>
             <div class="form-group">
@@ -113,7 +122,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">PEDIDO DE INSCRIÇÃO ENVIADO COM SUCESSO!</h4>
+        <h5 class="modal-title" id="myModalLabel">PEDIDO DE INSCRIÇÃO ENVIADO COM SUCESSO!</h5>
       </div>
       <div class="modal-body">
           <div class="row">
@@ -125,12 +134,20 @@
           </div>
           <div class="row">
             <div class="col-xs-12">
-              <div class="row">
-                <div class="col-xs-12 col-sm-3 col-md-3 centraliza" style="margin-top:20px"><img src="images/discursiva_men.png" alt=""></div>
-                <div class="col-xs-12 col-sm-3 col-md-3 centraliza" style="margin-top:20px"><img src="images/sentenca_men.png" alt=""></div>
-                <div class="col-xs-12 col-sm-3 col-md-3 centraliza" style="margin-top:20px"><img src="images/preparatorio_men.png" alt=""></div>
-                <div class="col-xs-12 col-sm-3 col-md-3 centraliza" style="margin-top:20px"><img src="images/acompanhamento_men.png" alt=""></div>
-              </div>
+              <ul>
+                <%
+                Set rsOutrosCursos = Server.CreateObject("ADODB.Recordset")
+                rsOutrosCursos.Open "select * from "&prefixoTabela&"cursos where ativo='s' order by nome asc", Conexao
+                while not rsOutrosCursos.eof
+                %>
+                <li><a href="cursos_interna.asp?id=<%=rsOutrosCursos("id")%>" class="link"><%=rsOutrosCursos("nome")%></a></li>
+                <%
+                rsOutrosCursos.MoveNext()
+                wend
+                rsOutrosCursos.Close()
+                set rsOutrosCursos = nothing            
+                %>
+              </ul>
             </div>
           </div>
       </div>
@@ -147,7 +164,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">OCORREU ALGUM PROBLEMA NO ENVIO DA SUA INSCRIÇÃO!</h4>
+        <h5 class="modal-title" id="myModalLabel">OCORREU ALGUM PROBLEMA NO ENVIO DA SUA INSCRIÇÃO!</h5>
       </div>
       <div class="modal-body">
           <div class="row">
@@ -159,12 +176,20 @@
           </div>
           <div class="row">
             <div class="col-xs-12">
-              <div class="row">
-                <div class="col-xs-12 col-sm-3 col-md-3 centraliza" style="margin-top:20px"><img src="images/discursiva_men.png" alt=""></div>
-                <div class="col-xs-12 col-sm-3 col-md-3 centraliza" style="margin-top:20px"><img src="images/sentenca_men.png" alt=""></div>
-                <div class="col-xs-12 col-sm-3 col-md-3 centraliza" style="margin-top:20px"><img src="images/preparatorio_men.png" alt=""></div>
-                <div class="col-xs-12 col-sm-3 col-md-3 centraliza" style="margin-top:20px"><img src="images/acompanhamento_men.png" alt=""></div>
-              </div>
+              <ul>
+                <%
+                Set rsOutrosCursos = Server.CreateObject("ADODB.Recordset")
+                rsOutrosCursos.Open "select * from "&prefixoTabela&"cursos where ativo='s' order by nome asc", Conexao
+                while not rsOutrosCursos.eof
+                %>
+                <li><a href="cursos_interna.asp?id=<%=rsOutrosCursos("id")%>" class="link"><%=rsOutrosCursos("nome")%></a></li>
+                <%
+                rsOutrosCursos.MoveNext()
+                wend
+                rsOutrosCursos.Close()
+                set rsOutrosCursos = nothing            
+                %>
+              </ul>
             </div>
           </div>
       </div>

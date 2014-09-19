@@ -7,6 +7,7 @@
 	        <li><a href="_listas.asp?tipo=1&act=1">Banner</a></li>
 	        <li><a href="_listas.asp?tipo=2&act=1">Notícias</a></li>
 	        <li><a href="_listas.asp?tipo=3&act=1">Depoimentos</a></li>
+	        <li><a href="_listas.asp?tipo=11&act=1">Cursos</a></li>
 	        <li><a href="_listas.asp?tipo=4&act=1">Galeria de fotos</a></li>
 	        <!--<li><a href="_listas.asp?tipo=5&act=1">Provas</a></li>/-->
 

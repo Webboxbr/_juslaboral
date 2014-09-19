@@ -84,7 +84,7 @@ elseif act="2" then
 	On Error Resume Next
 
 		'Faz o upload do arquivo, o arquivo fica salvo no caminho upArquivo, ver global.asp
-		Upload.Save upFotoGaleria
+		Upload.Save upFotoDepoimento
 
 		'Arquivos:		
 		txtArquivo = Upload.Files("txtArquivo").filename
@@ -141,7 +141,7 @@ elseif act="2" then
 		addRs.open editSQL, Conexao
 	else
 		set addRs=Server.CreateObject("ADODB.recordset")
-		editSQL = "UPDATE "&prefixoTabela&"depoimento SET foto='"& txtArquivo &"', nome='"& txtnome &"', texto='"& txtDepoimento &"', ultima_alteracao='"& ultima_alteracao &"' WHERE id="&id
+		editSQL = "UPDATE "&prefixoTabela&"depoimento SET arquivo='"& txtArquivo &"', nome='"& txtnome &"', texto='"& txtDepoimento &"', ultima_alteracao='"& ultima_alteracao &"' WHERE id="&id
 		addRs.open editSQL, Conexao
 	end if
 

@@ -30,10 +30,18 @@
 					          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="ico2"></span>Cursos<span class="caret"></span></a>
 					          <ul class="dropdown-menu" role="menu">
 					          	<li><a href="cursos.asp">Apresentação</a></li>
-					            <li><a href="discursiva.asp">Discursiva</a></li>
-					            <li><a href="sentenca.asp">Sentença</a></li>
-					            <li><a href="prep_oral.asp">Preparatório oral</a></li>
-					            <li><a href="acompanhamento.asp">Acompanhamento 24h</a></li>
+								<%
+								Set rsOutrosCursos = Server.CreateObject("ADODB.Recordset")
+								rsOutrosCursos.Open "select * from "&prefixoTabela&"cursos where ativo='s' order by nome asc", Conexao
+								while not rsOutrosCursos.eof
+								%>
+								<li><a href="cursos_interna.asp?id=<%=rsOutrosCursos("id")%>"><%=rsOutrosCursos("nome")%></a></li>
+								<%
+								rsOutrosCursos.MoveNext()
+								wend
+								rsOutrosCursos.Close()
+								set rsOutrosCursos = nothing            
+								%>
 					          </ul>
 					        </li>
 					        <li><a href="provas.asp"><span id="ico3"></span>Provas</a></li>

@@ -36,10 +36,12 @@ if act="1" then
 		AspJpeg.Open imagem
 
 		'Define a largura
-		L = 800
+		L = 600
+		A = 340
 		'Redimensiona, preservando as proporções
 		AspJpeg.Width = L
-		AspJpeg.Height = AspJpeg.OriginalHeight * L / AspJpeg.OriginalWidth
+		AspJpeg.Height = A
+		'AspJpeg.Height = AspJpeg.OriginalHeight * L / AspJpeg.OriginalWidth
 
 		'Esse método é opcional, usado para melhorar o visual da imagem.
 		AspJpeg.Sharpen 1, 150
@@ -95,10 +97,12 @@ elseif act="2" then
 		AspJpeg.Open imagem
 
 		'Define a largura
-		L = 800
+		L = 600
+		A = 340
 		'Redimensiona, preservando as proporções
 		AspJpeg.Width = L
-		AspJpeg.Height = AspJpeg.OriginalHeight * L / AspJpeg.OriginalWidth
+		AspJpeg.Height = A
+		'AspJpeg.Height = AspJpeg.OriginalHeight * L / AspJpeg.OriginalWidth
 
 		'Esse método é opcional, usado para melhorar o visual da imagem.
 		AspJpeg.Sharpen 1, 150

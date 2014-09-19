@@ -31,6 +31,11 @@ if act="1" then
 			</div>
 	    </div>
 
+	    <div class="form-group">
+	  		<label for="txtLink">Link</label>
+	    	<input type="url" name="txtLink" id="txtLink" class="form-control" /></label>
+	    </div>
+
 	    <div class="form-group">	      
 	    	<label for="txtTexto">Notícia</label>
 	    	<textarea name="txtTexto" id="txtTexto" class="form-control"></textarea>
@@ -67,6 +72,11 @@ rsNoticia.Open "select * from "&prefixoTabela&"noticia where id="&id, Conexao
 			    </div>
 			</div>
 		</div>
+
+		<div class="form-group">
+	  		<label for="txtLink">Link</label>
+	    	<input type="url" name="txtLink" id="txtLink" class="form-control" value="<%=rsNoticia("link")%>" /></label>
+	    </div>
 
 	    <div class="form-group">	      
 	    	<label for="txtTexto">Notícia</label>

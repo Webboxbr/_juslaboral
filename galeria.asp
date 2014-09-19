@@ -1,3 +1,4 @@
+<!--#include file="admin/conexao.asp" -->
 <!DOCTYPE HTML>
 <html lang="pt-br">
 <head>
@@ -59,37 +60,44 @@
  			<div class="row">
  				<div class="col-xs-12 col-sm-12 col-md-12">
  					<h2 class="cinza"><span id="ico22"></span>Galeria de Fotos</h2>
- 					<p>UT ENIM AD MINIM VENIAM, ULLAMCO LABORIS  EX EA COMMODO CONSEQUAT.</p>
- 					<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
- 					
+ 					<p>Confira as fotos da Galeria Cursos Juslaboral</p>					
 
-
+          
           <section class="slider">
             <div id="slider" class="flexslider">
               <ul class="slides">
-                <li><img src="assets_galeria/images/1.jpg" /></li>
-              <li><img src="assets_galeria/images/2.jpg" /></li>
-                <li><img src="assets_galeria/images/3.jpg" /></li>
-                <li><img src="assets_galeria/images/4.jpg" /></li>
-                <li><img src="assets_galeria/images/5.jpg" /></li>
-                <li><img src="assets_galeria/images/6.jpg" /></li>
-                <li><img src="assets_galeria/images/7.jpg" /></li>
-                <li><img src="assets_galeria/images/8.jpg" /></li>               
+                <%
+                Set rsGaleria = Server.CreateObject("ADODB.Recordset")
+                rsGaleria.Open "select * from "&prefixoTabela&"galeria where ativo='s' order by id asc", Conexao
+                while not rsGaleria.eof
+                %>
+                <li><img src="<%=enderecoFotoTh%><%=rsGaleria("arquivo")%>" /></li>              
+                <%
+                rsGaleria.MoveNext()
+                wend
+                rsGaleria.Close()
+                set rsGaleria = nothing            
+                %>
               </ul>
             </div>
             <div id="carousel" class="flexslider">
               <ul class="slides">
-                <li><img src="assets_galeria/images/1.jpg" /></li>
-              <li><img src="assets_galeria/images/2.jpg" /></li>
-                <li><img src="assets_galeria/images/3.jpg" /></li>
-                <li><img src="assets_galeria/images/4.jpg" /></li>
-                <li><img src="assets_galeria/images/5.jpg" /></li>
-                <li><img src="assets_galeria/images/6.jpg" /></li>
-                <li><img src="assets_galeria/images/7.jpg" /></li>
-                <li><img src="assets_galeria/images/8.jpg" /></li>               
+                <%
+                Set rsGaleria = Server.CreateObject("ADODB.Recordset")
+                rsGaleria.Open "select * from "&prefixoTabela&"galeria where ativo='s' order by id asc", Conexao
+                while not rsGaleria.eof
+                %>
+                <li><img src="<%=enderecoFotoTh%><%=rsGaleria("arquivo")%>" /></li>              
+                <%
+                rsGaleria.MoveNext()
+                wend
+                rsGaleria.Close()
+                set rsGaleria = nothing            
+                %>              
               </ul>
             </div>
           </section>
+          
 
 
 
