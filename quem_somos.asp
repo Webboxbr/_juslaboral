@@ -65,6 +65,8 @@ Para nos conhecerem um pouco melhor, acessem o link professores.</p>
 <p>Um fraterno abraço!<br>
 <b>Equipe Juslaboral.</b></p>
 
+<button type="button" class="btn btn-azul-escuro" onclick="location.href='professores.asp'">CONHEÇA NOSSOS PROFESSORES</button> 
+
 
  				</div>				
  			</div> 			

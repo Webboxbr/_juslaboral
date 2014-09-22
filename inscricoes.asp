@@ -198,7 +198,50 @@
       </div>
     </div>
   </div>
-</div>   
+</div>
+
+
+<!-- Modal /-->
+<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h5 class="modal-title" id="myModalLabel">OCORREU ALGUM PROBLEMA NO ENVIO DA SUA INSCRIÇÃO!</h5>
+      </div>
+      <div class="modal-body">
+          <div class="row">
+            
+            <div class="col-xs-12">
+              <p>O e-mail informado não parece ser um e-mail válido.</p>
+              <p><b>CONHEÇA OS OUTROS CURSOS</b></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <ul>
+                <%
+                Set rsOutrosCursos = Server.CreateObject("ADODB.Recordset")
+                rsOutrosCursos.Open "select * from "&prefixoTabela&"cursos where ativo='s' order by nome asc", Conexao
+                while not rsOutrosCursos.eof
+                %>
+                <li><a href="cursos_interna.asp?id=<%=rsOutrosCursos("id")%>" class="link"><%=rsOutrosCursos("nome")%></a></li>
+                <%
+                rsOutrosCursos.MoveNext()
+                wend
+                rsOutrosCursos.Close()
+                set rsOutrosCursos = nothing            
+                %>
+              </ul>
+            </div>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-amarelo" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <!-- início do javascript /-->
@@ -217,6 +260,12 @@ elseif id="2" then
 %>
 <script type="text/javascript"> 
   $('#myModal2').modal('show')
+</script>
+<%
+elseif id="3" then
+%>
+<script type="text/javascript"> 
+  $('#myModal3').modal('show')
 </script>
 <%
 end if

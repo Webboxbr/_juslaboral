@@ -78,7 +78,7 @@
 
 							<ul class="social">
 								<li><a href="mailto:iuripinheiro@cursojuslaboral.com.br"><img src="images/mail.jpg" alt=""></a></li>
-								<li><a href=""><img src="images/face.jpg" alt=""></a></li>
+								<!--<li><a href=""><img src="images/face.jpg" alt=""></a></li>-->
 							</ul>	 					
 	 					
 	 				</div>
@@ -114,7 +114,7 @@
  					<div class="bg-cinza">
 	 					<div class="cap-foto">
 	 						<img class="mask" src="images/mask_exagono2.png" alt="">
-	 						<img class="foto" src="images/professores/semfoto.jpg" alt="">
+	 						<img class="foto" src="images/professores/marcel.jpg" alt="">
 	 					</div>
 	 					<p>MARCEL DE AVILA SOARES MARQUES</p>					
 	 					

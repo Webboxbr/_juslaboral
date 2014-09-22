@@ -95,8 +95,7 @@ End Function
             rsBanner.Open "select * from "&prefixoTabela&"banner where ativo='s' order by id asc", Conexao
             
             while not rsBanner.eof
-            linkBanner = rsBanner("link")
-            
+            linkBanner = rsBanner("link")            
             %>
               <li><a href="<%=linkBanner%>"><img src="<%=enderecoBanner%><%=rsBanner("arquivo")%>" alt=""></a></li>
             <%
@@ -156,12 +155,12 @@ End Function
               if rsNoticias("link")<>"" then
               %>
               <a href="<%=link%>" target="_blank" class="link">
-              <p><span class="tit-not"><%=rsNoticias("nome")%> - <%=rsNoticias("data")%></span><br><%=tamTexto(noticia,197)%></p>
+              <p style="word-wrap:break-word;"><span class="tit-not"><%=rsNoticias("nome")%> - <%=rsNoticias("data")%></span><br><%=tamTexto(noticia,197)%></p>
               </a>
               <%
               else
               %>
-              <p><span class="tit-not"><%=rsNoticias("nome")%> - <%=rsNoticias("data")%></span><br><%=tamTexto(noticia,197)%></p>
+              <p style="word-wrap:break-word;"><span class="tit-not"><%=rsNoticias("nome")%> - <%=rsNoticias("data")%></span><br><%=tamTexto(noticia,197)%></p>
               <%
               end if
               %>

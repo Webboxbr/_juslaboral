@@ -11,7 +11,7 @@ if act="1" then
 	<h1 class="desloca-esq">Lista de banners cadastrados</h1>
 	<div class="desloca-dir"><button type="button" class="btn btn-primary" onclick="location.href='_dados.asp?tipo=1&act=1'">Incluir Banner</button></div>
 	<div class="clear"></div>
-	<div style="height:20px"></div>
+	
 
 	<%
 	Set rsBanner = Server.CreateObject("ADODB.Recordset")

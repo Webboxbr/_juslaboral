@@ -11,6 +11,8 @@ if act="1" then
 	<h1 class="desloca-esq">Lista de notícias cadastradas</h1>
 	<div class="desloca-dir"><button type="button" class="btn btn-primary" onclick="location.href='_dados.asp?tipo=2&act=1'">Incluir Notícia</button></div>
 	<div class="clear"></div>
+	<p style="margin-top:-20px;"  class="label label-info">ATENÇÃO: Somente as três últimas notícias cadastradas, serão visualizadas no site.</p>
+	<div style="height:20px"></div>
 
 	<%
 	

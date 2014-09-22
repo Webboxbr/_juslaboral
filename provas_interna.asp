@@ -112,7 +112,7 @@ end if
 
                     while not rsArquivo.eof
                     %>
-                      <li><a href="<%=enderecoArquivo%><%=rsArquivo("arquivo")%>" class="link"><%=rsArquivo("nome")%></a></li>
+                      <li><a href="<%=enderecoArquivo%><%=rsArquivo("arquivo")%>" class="link" target="_blank"><%=rsArquivo("nome")%></a></li>
                     <%
                     rsArquivo.MoveNext()                    
                     wend

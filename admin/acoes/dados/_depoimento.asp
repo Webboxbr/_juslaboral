@@ -19,7 +19,9 @@ if act="1" then
 		
 		<div class="form-group">
 			<label for="txtArquivo">Foto</label>	
-    		<input name="txtArquivo" type="file" id="txtArquivo" />  	
+    		<input name="txtArquivo" type="file" id="txtArquivo" accept="jpg|png" /> 
+    		<p class="help-block">Tamanho recomendado: 173 x 198 pixels. Formato png ou jpg<br>
+	    	O nome do arquivo não deve conter espaços, acentuação ou caracteres especiais.</p> 	
 	  	</div>
 
 	  	<div class="form-group">
@@ -51,6 +53,9 @@ rsDepoimentos.Open "select * from "&prefixoTabela&"depoimento where id="&id, Con
 		<div class="form-group">
 			<label for="txtArquivo">Foto</label>
     		<input name="txtArquivo" type="file" id="txtArquivo" />
+    		<p class="help-block">Tamanho recomendado: 173 x 198 pixels. Formato png ou jpg<br>
+	    	O nome do arquivo não deve conter espaços, acentuação ou caracteres especiais.<br>
+	    	Se desejar manter o banner existente, ignore este campo.</p> 
 	  	</div>
 
 	  	<div class="form-group">

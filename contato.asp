@@ -230,13 +230,37 @@ set rsDepoimentos = nothing
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h5 class="modal-title" id="myModalLabel">OCORREU ALGUM PROBLEMA NO ENVIO DO SEU CONTATO!</h5>
+        <h5 class="modal-title" id="myModalLabel">OCORREU ALGUM PROBLEMA NO ENVIO DA SUA MENSAGEM!</h5>
       </div>
       <div class="modal-body">
           <div class="row">
             
             <div class="col-xs-12">
               <p>Veja se os campos com (*) foram preenchidos ou tente novamente mais tarde.</p>
+            </div>
+          </div>          
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-amarelo" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal /-->
+<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h5 class="modal-title" id="myModalLabel">OCORREU ALGUM PROBLEMA NO ENVIO DA SUA MENSAGEM!</h5>
+      </div>
+      <div class="modal-body">
+          <div class="row">
+            
+            <div class="col-xs-12">
+              <p>O e-mail informado não parece ser um e-mail válido.</p>
             </div>
           </div>          
       </div>
@@ -264,6 +288,12 @@ elseif id="2" then
 %>
 <script type="text/javascript"> 
   $('#myModal2').modal('show')
+</script>
+<%
+elseif id="3" then
+%>
+<script type="text/javascript"> 
+  $('#myModal3').modal('show')
 </script>
 <%
 end if

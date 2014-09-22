@@ -14,14 +14,18 @@ if act="1" then
 	<form id="formCadastro" name="formCadastro" method="POST" enctype="multipart/form-data" action="_gravacao.asp?tipo=1&act=1">
 		<div class="form-group">
 			<label for="txtArquivo">Banner(*) </label>
-	    	<input name="txtArquivo" type="file" id="txtArquivo"  />
-	    	<p class="help-block">Tamanho recomendado: 1600 x 530 pixels. Formato png ou jpg</p>
+	    	<input name="txtArquivo" type="file" id="txtArquivo" accept="jpg|png" />
+	    	<p class="help-block">Tamanho recomendado: 1600 x 530 pixels. Formato png ou jpg<br>
+	    	O nome do arquivo não deve conter espaços, acentuação ou caracteres especiais.</p>	    	
     	</div>
 	  	
 	  	<div class="form-group">
 	  		<label for="txtLink">Link</label>
-	    	<input type="url" name="txtLink" id="txtLink" class="form-control"/>
+	    	<input type="url" name="txtLink" id="txtLink" class="form-control" oninvalid="setCustomValidity('A URL deve estar completa, por exemplo: http://www.g1.com.br')" onchange="try{setCustomValidity('')}catch(e){}"/>
+	    	<p class="help-block">Exemplo de link: "http://www.g1.com.br"</p>
 	    </div>
+
+
 
 		<button type="submit" class="btn btn-primary">Salvar</button>
 		<button type="button" class="btn btn-default" onclick="javascript:history.back();">Cancelar</button>
@@ -40,12 +44,15 @@ rsBanner.Open "select * from "&prefixoTabela&"banner where id="&id, Conexao
 		<div class="form-group">
 			<label for="txtArquivo">Banner</label>
     		<input name="txtArquivo" type="file" id="txtArquivo" />
-    		<p class="help-block">Tamanho recomendado: 1600 x 530 pixels. Formato png ou jpg<br>Se desejar manter o banner existente, ignore este campo.</p>
+    		<p class="help-block">Tamanho recomendado: 1600 x 530 pixels. Formato png ou jpg<br>
+	    	O nome do arquivo não deve conter espaços, acentuação ou caracteres especiais.<br>
+	    	Se desejar manter o banner existente, ignore este campo.</p>
 	  	</div>
 
 	  	<div class="form-group">
 	  		<label for="txtLink">Link</label>	
-	    	<input type="url" name="txtLink" id="txtLink" value="<%=rsBanner("link")%>"  class="form-control" />    	        
+	    	<input type="url" name="txtLink" id="txtLink" value="<%=rsBanner("link")%>"  class="form-control" oninvalid="setCustomValidity('A URL deve estar completa, por exemplo: http://www.g1.com.br')" onchange="try{setCustomValidity('')}catch(e){}" />
+	    	<p class="help-block">Exemplo de link: "http://www.g1.com.br"</p>	        
 	    </div>
 	    
 		<button type="submit" class="btn btn-primary">Salvar</button>

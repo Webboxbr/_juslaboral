@@ -33,7 +33,8 @@ if act="1" then
 
 	    <div class="form-group">
 	  		<label for="txtLink">Link</label>
-	    	<input type="url" name="txtLink" id="txtLink" class="form-control" /></label>
+	    	<input type="url" name="txtLink" id="txtLink" class="form-control" oninvalid="setCustomValidity('A URL deve estar completa, por exemplo: http://www.g1.com.br')" onchange="try{setCustomValidity('')}catch(e){}" /></label>
+	    	<p class="help-block">Exemplo de link: "http://www.g1.com.br"</p>	
 	    </div>
 
 	    <div class="form-group">	      
@@ -75,7 +76,8 @@ rsNoticia.Open "select * from "&prefixoTabela&"noticia where id="&id, Conexao
 
 		<div class="form-group">
 	  		<label for="txtLink">Link</label>
-	    	<input type="url" name="txtLink" id="txtLink" class="form-control" value="<%=rsNoticia("link")%>" /></label>
+	    	<input type="url" name="txtLink" id="txtLink" class="form-control" value="<%=rsNoticia("link")%>" oninvalid="setCustomValidity('A URL deve estar completa, por exemplo: http://www.g1.com.br')" onchange="try{setCustomValidity('')}catch(e){}" /></label>
+	    	<p class="help-block">Exemplo de link: "http://www.g1.com.br"</p>	
 	    </div>
 
 	    <div class="form-group">	      
