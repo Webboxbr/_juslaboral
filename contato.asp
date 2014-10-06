@@ -5,7 +5,8 @@
  	<meta charset="UTF-8">
 
  	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="Entre em contato com o Curso Juslaboral e comece agora mesmo a planejar a sua aprovação.">
+    <meta name="keywords" content="Contato Cursos Juslaboral, contato Juslaboral, telefone Juslaboral, endereço Juslaboral.">
     <meta name="author" content="Webbox">
 
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
@@ -27,7 +28,7 @@
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="assets/ico/favicon.png">
 
- 	<title>Juslaboral</title>
+ 	<title>Cursos Juslaboral | Contato – Fale conosco</title>
 
 </head>
 <body> 

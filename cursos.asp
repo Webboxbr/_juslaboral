@@ -5,7 +5,8 @@
  	<meta charset="UTF-8">
 
  	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="Conteúdos práticos e esclarecedores, com disciplinas que integram-se entre si visando a aprovação.">
+    <meta name="keywords" content="Cursos Juslaboral, curso Juslaboral, curso Magistério, curso Magistratura, cursos Magistério, cursos Magistratura, cursos preparação Magistratura, cursos preparação Magistério, curso preparação Magistério, curso preparação magistratura. ">
     <meta name="author" content="Webbox">
 
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
@@ -26,7 +27,7 @@
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="assets/ico/favicon.png">
 
- 	<title>Juslaboral</title>
+ 	<title>Cursos Juslaboral | Apresentação dos cursos</title>
 
 </head>
 <body> 

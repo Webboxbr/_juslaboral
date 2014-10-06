@@ -6,6 +6,7 @@ tipo 	= request.QueryString("tipo")
 act 	= request.QueryString("act")
 id		= request("id")
 idC		= request("idC")
+idAlbum	= request("idAlbum")
 
 dia = Day(Date())
 mes = MonthName(Month(Date()))
@@ -31,7 +32,7 @@ minuto = Minute(Time())
 			<% elseif tipo="3" then %>
 				<!--#include file="acoes/gravacao/_depoimento.asp" -->
 			<% elseif tipo="4" then	%>
-				<!--#include file="acoes/gravacao/_galeria.asp" -->
+				<!--#include file="acoes/gravacao/_album.asp" -->
 			<% elseif tipo="5" then	%>
 				<!--#include file="acoes/gravacao/_primeira_fase.asp" -->
 			<% elseif tipo="6" then	%>
@@ -47,7 +48,7 @@ minuto = Minute(Time())
 			<% elseif tipo="11" then %>
 				<!--#include file="acoes/gravacao/_cursos.asp" -->
 			<% elseif tipo="12" then %>
-				<!-- inclua uma lista -->
+				<!--#include file="acoes/gravacao/_galeria.asp" -->
 			<% elseif tipo="13" then %>
 				<!-- inclua uma lista -->
 			<% elseif tipo="14" then %>

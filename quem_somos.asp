@@ -5,7 +5,8 @@
  	<meta charset="UTF-8">
 
  	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="Um jeito diferente de aprovar. Acolhimento, apoio e acompanhamento rumo à Magistratura. ">
+    <meta name="keywords" content="Juslaboral, Curso Juslaboral, empresa Juslaboral, história Juslaboral, histórico Juslaboral.">
     <meta name="author" content="Webbox">
 
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
@@ -26,7 +27,7 @@
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="assets/ico/favicon.png">
 
- 	<title>Juslaboral</title>
+ 	<title>Curso Juslaboral | Quem Somos</title>
 
 </head>
 <body> 
@@ -60,7 +61,7 @@ Sejam bem vindos ao site do Curso Juslaboral. Pedimos licença para tecer alguma
 <p>Nosso ideal é oferecer um trabalho humano, completo e cúmplice para que vocês se sintam acolhidos e acompanhados, pois o que almejamos é auxiliar e, principalmente, caminhar juntos nessa busca pela aprovação. Somos, antes de mais nada, apaixonados pelo que fazemos, não nos referindo apenas sobre a paixão pela magistratura, mas também sobre o fascínio pela docência e pela possibilidade de fazer por vocês o que gostaríamos que tivessem feito por nós.</p>
 
 <p>É isso, adentrem ao mundo do Curso Juslaboral, um jeito diferente de aprovar!<br>
-Para nos conhecerem um pouco melhor, acessem o link professores.</p>
+Para nos conhecerem um pouco melhor, acessem o link <a href="professores.asp">professores</a>.</p>
 
 <p>Um fraterno abraço!<br>
 <b>Equipe Juslaboral.</b></p>

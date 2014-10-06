@@ -12,7 +12,8 @@ end if
  	<meta charset="UTF-8">
 
  	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="Confira as provas disponibilizadas online no website do Curso Juslaboral.">
+    <meta name="keywords" content="Provas Magistério, provas Magistratura, prova Magistério, prova Magistratura, fases prova Magistério, fases prova Magistratura, fase prova Magistério, fase prova Magistratura.">
     <meta name="author" content="Webbox">
 
   	<link rel="stylesheet" type="text/css" href="css/normalize.css">
@@ -33,7 +34,7 @@ end if
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="assets/ico/favicon.png">
 
- 	<title>Juslaboral</title>
+ 	<title>Cursos Juslaboral | Provas e fases</title>
 
 </head>
 <body> 
@@ -81,6 +82,12 @@ end if
             rsProvas.Open "select * from "&prefixoTabela&"terceira_fase where ativo='s' order by id desc", Conexao
             end if
 
+
+            if rsProvas.eof=true then
+            response.write("<p>No momento não existem provas a serem visualizadas. Retorne em breve!</p>")
+            end if
+
+
             dim contador
             contador = 1
             while not rsProvas.eof
@@ -109,6 +116,11 @@ end if
                     elseif fase="3" then
                     rsArquivo.Open "select * from "&prefixoTabela&"arquivo_3 where ativo='s' and idFase="&rsProvas("id")&" order by id desc", Conexao
                     end if
+
+                    if rsArquivo.eof=true then
+                    response.write("<p>No momento não existem provas a serem visualizadas. Retorne em breve!</p>")
+                    end if
+
 
                     while not rsArquivo.eof
                     %>

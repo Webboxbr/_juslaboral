@@ -7,7 +7,7 @@
 '**********************************************'
 
 if act="1" then
-
+	
 	Set Upload = Server.CreateObject("Persits.Upload.1")
 	Upload.OverwriteFiles = false
 	On Error Resume Next
@@ -17,7 +17,10 @@ if act="1" then
 
 		'Arquivos:		
 		txtArquivo = Upload.Files("txtArquivo").filename
-		'txtArquivo2 = Upload.Files("txtArquivo2").filename	
+		'txtArquivo2 = Upload.Files("txtArquivo2").filename
+
+		'textuais'		
+		idAlbum = Upload.Form("idAlbum")
 
 		'Debug
 		'response.write("Nome da imagem: "&txtArquivo&"<br>")
@@ -36,8 +39,8 @@ if act="1" then
 		AspJpeg.Open imagem
 
 		'Define a largura
-		L = 600
-		A = 340
+		L = 800
+		A = 600
 		'Redimensiona, preservando as proporções
 		AspJpeg.Width = L
 		AspJpeg.Height = A
@@ -57,18 +60,21 @@ if act="1" then
 		' cria a thumb da imagem publicada
 		'-----------------------------------------------^
 
+	
+
 		datasys = now()
 		ultima_alteracao = datasys&" - "&session("user")
 		
 
 	set addRs=Server.CreateObject("ADODB.recordset")
-	addSQL = "INSERT INTO "&prefixoTabela&"galeria (arquivo, ultima_alteracao) values ('"&txtArquivo&"','"&ultima_alteracao&"')"
+	addSQL = "INSERT INTO "&prefixoTabela&"galeria (idAlbum, arquivo, ultima_alteracao) values ('"&idAlbum&"','"&txtArquivo&"','"&ultima_alteracao&"')"
 	addRs.open addSQL, Conexao
+	
+	response.redirect("_dados.asp?tipo=12&act=1&idAlbum="&idAlbum)
 
-	response.redirect("_listas.asp?tipo=4&act=1")
 
 elseif act="2" then
-	
+
 	Set Upload = Server.CreateObject("Persits.Upload.1")
 	Upload.OverwriteFiles = false
 	On Error Resume Next
@@ -78,7 +84,10 @@ elseif act="2" then
 
 		'Arquivos:		
 		txtArquivo = Upload.Files("txtArquivo").filename
-		'txtArquivo2 = Upload.Files("txtArquivo2").filename		
+		'txtArquivo2 = Upload.Files("txtArquivo2").filename
+
+		'textuais'		
+		idAlbum = Upload.Form("idAlbum")	
 		
 		'Debug
 		'response.write("Nome da imagem: "&txtArquivo&"<br>")
@@ -97,8 +106,8 @@ elseif act="2" then
 		AspJpeg.Open imagem
 
 		'Define a largura
-		L = 600
-		A = 340
+		L = 800
+		A = 600
 		'Redimensiona, preservando as proporções
 		AspJpeg.Width = L
 		AspJpeg.Height = A
@@ -131,9 +140,8 @@ elseif act="2" then
 		set addRs=Server.CreateObject("ADODB.recordset")
 		editSQL = "UPDATE "&prefixoTabela&"galeria SET arquivo='"& txtArquivo &"', ultima_alteracao='"& ultima_alteracao &"' WHERE id="&id
 		addRs.open editSQL, Conexao
-	
 
-	response.Redirect("_listas.asp?tipo=4&act=1")
+		response.redirect("_dados.asp?tipo=12&act=1&idAlbum="&idAlbum)
 
 elseif act="3" then
 %>

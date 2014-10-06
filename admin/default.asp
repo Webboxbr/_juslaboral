@@ -5,10 +5,10 @@
 erro	=	request("err")
 %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE HTML>
+<html lang="pt-br">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=Iso-8859-1" />
+<meta charset="UTF-8">
 <title><%=tituloHome%></title>
 <link href="../css/normalize.css" rel="stylesheet" type="text/css" />
 <link href="css/style_adm.css" rel="stylesheet" type="text/css" />
@@ -32,7 +32,7 @@ erro	=	request("err")
 				    <input type="image" src="images/botEntrar.jpg" name="button" id="button"  />
 				    </div>
 				    <span class="clear"></span>
-			    </fieldset>
+			    </fieldset> 
 			</form>
 			<!--<p class="t12 branco semEsp desloca-dir" style="margin-right:140px;">Esqueceu a senha? <a href="#" class="link-normal-branco">Clique aqui</a>.</p>-->
 			<span class="clear"></span>		
@@ -44,7 +44,7 @@ erro	=	request("err")
 <div id="geral">
 
 	<div class="logo"></div>
-	<p class="t30 azul-2 aling-centro">Bem vindo a ferramenta de administração do<br><span class="t50 negrito">Curso Juslaboral</span></p>
+	<p class="t30 azul-2 aling-centro">Bem vindo a ferramenta de administra&ccedil;&atilde;o do<br><span class="t50 negrito">Curso Juslaboral</span></p>
 
 </div>
 

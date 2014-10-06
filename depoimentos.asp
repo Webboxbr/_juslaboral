@@ -5,7 +5,8 @@
  	<meta charset="UTF-8">
 
  	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="Saiba  o que pensam os candidatos aprovados a respeito do Curso Juslaboral ">
+    <meta name="keywords" content="Depoimentos Curso Juslaboral, depoimento Curso Juslaboral, depoimentos Juslaboral, depoimento Juslaboral, aprovados Juslaboral, aprovado Juslaboral.">
     <meta name="author" content="Webbox">
 
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
@@ -26,7 +27,7 @@
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="assets/ico/favicon.png">
 
- 	<title>Juslaboral</title>
+ 	<title>Cursos Juslaboral | Depoimentos</title>
 
 
 <style type="text/css">
@@ -144,7 +145,7 @@ End Function
         depoimento_resumo = RemoveHTMLTags(depoimento)
 
         %> 
-        <div class="col-xs-12 col-sm-12 col-md-4 it centraliza botao" data-toggle="modal" data-target="#myModal<%=rsDepoimentos("id")%>">
+        <div class="col-xs-12 col-sm-12 col-md-4 it centraliza botao cinza-p" data-toggle="modal" data-target="#myModal<%=rsDepoimentos("id")%>">
           <div class="cap-foto">
             <img class="mask" src="images/mask_exagono.png" alt="">
             <img class="foto" src="<%=enderecoDepoimentoTh%><%=rsDepoimentos("arquivo")%>" alt="">
@@ -170,7 +171,7 @@ End Function
                 <img class="foto" src="<%=enderecoDepoimentoTh%><%=rsDepoimentos("arquivo")%>" alt="" width="140px">
               </div>
             </div>
-            <div class="col-xs-12 col-sm-9 col-md-9 it">
+            <div class="col-xs-12 col-sm-9 col-md-9 it cinza-p">
               <%=depoimento%>
               <p><b><%=rsDepoimentos("nome")%></b></p>
             </div>

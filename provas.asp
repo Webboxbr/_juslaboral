@@ -5,7 +5,8 @@
  	<meta charset="UTF-8">
 
  	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="Confira as provas disponibilizadas online no website do Curso Juslaboral.">
+    <meta name="keywords" content="Provas Magistério, provas Magistratura, prova Magistério, prova Magistratura, fases prova Magistério, fases prova Magistratura, fase prova Magistério, fase prova Magistratura.">
     <meta name="author" content="Webbox">
 
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
@@ -26,7 +27,7 @@
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="assets/ico/favicon.png">
 
- 	<title>Juslaboral</title>
+ 	<title>Cursos Juslaboral | Provas e fases</title>
 
 </head>
 <body> 

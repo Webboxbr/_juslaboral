@@ -5,7 +5,8 @@
  	<meta charset="UTF-8">
 
  	  <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="Cursos especializados na aprovação em concursos à Magistratura. Acompanhamento 24h, Discursiva, Preparação Oral e Sentença. Conheça!">
+    <meta name="keywords" content="Curso Magistério, curso Magistratura, aprovação Magistério, aprovação Magistratura, concurso Magistério, concurso Magistratura, preparação Magistério, preparação Magistratura.">
     <meta name="author" content="Webbox">
 
 	
@@ -25,7 +26,7 @@
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="assets/ico/favicon.png">
 
- 	<title>Juslaboral</title>
+ 	<title>Curso Juslaboral | Cursos p/ aprovação em Magistratura</title>
 
   
 
@@ -298,7 +299,7 @@ set rsDepoimentos = nothing
 
 
 <link rel="stylesheet" type="text/css" href="css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 
 
 <!-- início do javascript /-->

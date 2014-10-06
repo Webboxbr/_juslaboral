@@ -10,10 +10,10 @@ idC			= request("idC")
 %>
 
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE HTML>
+<html lang="pt-br">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="UTF-8">
 <title><%=tituloHome%></title>
 <link href="../css/normalize.css" rel="stylesheet" type="text/css" />
 <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
@@ -127,7 +127,7 @@ idC			= request("idC")
 			<% elseif tipo="3" then %>
 				<!--#include file="acoes/listas/_depoimento.asp" -->
 			<% elseif tipo="4" then	%>
-				<!--#include file="acoes/listas/_galeria.asp" -->
+				<!--#include file="acoes/listas/_album.asp" -->
 			<% elseif tipo="5" then	%>
 				<!--#include file="acoes/listas/_primeira_fase.asp" -->
 			<% elseif tipo="6" then	%>

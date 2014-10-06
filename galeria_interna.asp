@@ -1,4 +1,7 @@
 <!--#include file="admin/conexao.asp" -->
+<%
+id = request.querystring("id")
+%>
 <!DOCTYPE HTML>
 <html lang="pt-br">
 <head>
@@ -60,47 +63,66 @@
  		<div class="container">
  			<div class="row">
  				<div class="col-xs-12 col-sm-12 col-md-12">
- 					<h2 class="cinza"><span id="ico22"></span>Galeria de Fotos</h2>
- 					<p>Confira as fotos da Galeria Cursos Juslaboral</p>					
+
+        <div class="row">
+          <div class="col-xs-12 col-sm12 col-md-9">
+            <h2 class="cinza"><span id="ico22"></span>Galeria de Fotos</h2>
+            <p>Confira as fotos da Galeria Cursos Juslaboral</p>
+          </div>
+          <div class="col-xs-12 col-sm12 col-md-3" style="margin-top:90px;"><button type="button" class="btn btn-azul-escuro" onclick="location.href='galeria.asp'">Ver outros álbuns</button></div>          
+        </div>
+        <div style="height:50px;"></div>
+ 										
 
 <%
-  Set rsAlbuns = Server.CreateObject("ADODB.Recordset")
-  rsAlbuns.Open "select * from "&prefixoTabela&"album where ativo='s' order by id desc", Conexao
+Set rsAlbum = Server.CreateObject("ADODB.Recordset")
+rsAlbum.Open "select * from "&prefixoTabela&"album where id="&id&" and ativo='s'", Conexao
 %>
 
-          
-          <ul class="box-album">
-            <%
-            while not rsAlbuns.eof
-
-            'define a capa do album'
-            Set rsGaleriaCapa = Server.CreateObject("ADODB.Recordset")
-            rsGaleriaCapa.Open "select * from "&prefixoTabela&"galeria where ativo='s' and idAlbum="&rsAlbuns("id")&" and capa='s'", Conexao
-
-              'verifica se a capa existe'
-              if rsGaleriaCapa.eof=true then
-              capa = "semImg.png"
-              else
-              capa = rsGaleriaCapa("arquivo")
-              end if
-              '-------------------------'   
-                       
-            %>
-              <li class="botao-albuns" onclick="location.href='galeria_interna.asp?id=<%=rsAlbuns("id")%>'">
-                <div class="centraliza"><img src="<%=enderecoFotoTh%><%=capa%>" alt=""></div>
-                <p><%=rsAlbuns("nome")%></p>
-                <p><%=rsAlbuns("texto")%></p>
-              </li> 
-            <%
-            rsAlbuns.MoveNext()
-            wend
-
-            rsAlbuns.Close()
-            set rsAlbuns = nothing
-            %>
-          </ul>
-
-
+          <div class="box-slider">
+            
+                <ul class="box-album-int">
+                  <li>
+                    <p><%=rsAlbum("nome")%></p>
+                    <p><%=rsAlbum("texto")%></p>
+                  </li>
+                </ul>
+              
+          </div>
+          <section class="slider box-slider">
+            <div id="slider" class="flexslider">
+              <ul class="slides">
+                <%
+                Set rsGaleria = Server.CreateObject("ADODB.Recordset")
+                rsGaleria.Open "select * from "&prefixoTabela&"galeria where idAlbum="&id&" and ativo='s' order by id asc", Conexao      
+                while not rsGaleria.eof
+                %>
+                <li><img src="<%=enderecoFotoTh%><%=rsGaleria("arquivo")%>" /></li>              
+                <%
+                rsGaleria.MoveNext()
+                wend
+                rsGaleria.Close()
+                set rsGaleria = nothing            
+                %>
+              </ul>
+            </div>
+            <div id="carousel" class="flexslider">
+              <ul class="slides">
+                <%
+                Set rsGaleria = Server.CreateObject("ADODB.Recordset")
+                rsGaleria.Open "select * from "&prefixoTabela&"galeria where idAlbum="&id&" and ativo='s' order by id asc", Conexao
+                while not rsGaleria.eof
+                %>
+                <li><img src="<%=enderecoFotoTh%><%=rsGaleria("arquivo")%>" /></li>              
+                <%
+                rsGaleria.MoveNext()
+                wend
+                rsGaleria.Close()
+                set rsGaleria = nothing            
+                %>              
+              </ul>
+            </div>
+          </section>
           
 
 

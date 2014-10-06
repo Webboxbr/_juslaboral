@@ -19,6 +19,7 @@ html {background-color:#EDEDED;}
 .aling-left {text-align:left;}
 .aling-centro {text-align:center;}
 .negrito {font-weight:bold;}
+.box-geral {width: 500px}
 
 .link-normal-branco {color:#fff;text-decoration:none;}
 
@@ -30,6 +31,12 @@ a.imgDel:hover { background-image: url(../images/del.png); background-repeat: no
 
 p {font-family: 'Open Sans', sans-serif;}
 .semEsp {margin:0;padding:0;}
+
+.coloca-sombra {
+	-webkit-box-shadow: 0px 2px 18px 0px rgba(50, 50, 50, 0.78);
+-moz-box-shadow:    0px 2px 18px 0px rgba(50, 50, 50, 0.78);
+box-shadow:         0px 2px 18px 0px rgba(50, 50, 50, 0.78);
+}
 
 
 
@@ -135,6 +142,47 @@ h1.logo {
 	width:1157px;
 	padding-left:20px;
 	padding-right:20px;
+}
+
+
+
+
+
+
+.box-album {
+	margin: 0;
+	padding: 0;
+}
+.box-album li img {
+	max-width: 100%;
+}
+.box-album li {
+	display: inline-block;
+	max-width: 367px;
+	margin-right: 10px;
+	padding: 0;
+	list-style: none;
+}
+.box-album li p {
+	font-size: 20px;
+	color: #333;
+	margin:0;
+	padding:0;
+}
+.box-album li p+p {
+	font-size: 15px;
+	color: #666;
+	margin-bottom:30px;
+	padding: 0;
+}
+.box-demo {
+	background-image: url(../images/bg_demo.jpg);
+	background-repeat: no-repeat;
+	padding-top: 236px;
+	padding-left: 176px;
+	padding-right: 174px;
+	padding-bottom: 86px;
+	width: 366px;
 }
 
 

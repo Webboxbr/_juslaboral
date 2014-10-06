@@ -7,16 +7,19 @@ tipo		= request.QueryString("tipo")
 act 		= request.QueryString("act")
 id			= request("id")
 idC			= request("idC")
+idAlbum		= request("idAlbum")
 %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE HTML>
+<html lang="pt-br" ng-app>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="UTF-8">
 <title><%=tituloHome%></title>
 <link href="../css/normalize.css" rel="stylesheet" type="text/css" />
 <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
 <link href="css/style_adm.css" rel="stylesheet" type="text/css" />
+
+<script src="http://code.angularjs.org/1.0.1/angular-1.0.1.min.js"></script>
 
 
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -98,7 +101,7 @@ idC			= request("idC")
 			<% elseif tipo="3" then %>
 				<!--#include file="acoes/dados/_depoimento.asp" -->
 			<% elseif tipo="4" then	%>
-				<!--#include file="acoes/dados/_galeria.asp" -->
+				<!--#include file="acoes/dados/_album.asp" -->
 			<% elseif tipo="5" then	%>
 				<!--#include file="acoes/dados/_primeira_fase.asp" -->
 			<% elseif tipo="6" then	%>
@@ -114,7 +117,7 @@ idC			= request("idC")
 			<% elseif tipo="11" then %>
 				<!--#include file="acoes/dados/_cursos.asp" -->
 			<% elseif tipo="12" then %>
-				<!-- inclua uma lista -->
+				<!--#include file="acoes/dados/_galeria.asp" -->
 			<% elseif tipo="13" then %>
 				<!-- inclua uma lista -->
 			<% elseif tipo="14" then %>
