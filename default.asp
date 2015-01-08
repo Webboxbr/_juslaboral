@@ -142,7 +142,8 @@ End Function
 
           <%
           Set rsNoticias = Server.CreateObject("ADODB.Recordset")
-          rsNoticias.Open "select * from "&prefixoTabela&"noticia where ativo='s' order by data desc limit 3", Conexao
+          'rsNoticias.Open "select * from "&prefixoTabela&"noticia where ativo='s' order by data desc limit 3", Conexao
+          rsNoticias.Open "select link, nome, texto, STR_TO_DATE(data,'%d/%m/%Y') as data from "&prefixoTabela&"noticia where ativo='s' order by data desc limit 3", Conexao
           while not rsNoticias.eof
 
           link = rsNoticias("link")
